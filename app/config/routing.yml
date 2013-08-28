@@ -1,0 +1,5 @@
+johanlopes_core:
+    resource: "@JohanlopesCoreBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
