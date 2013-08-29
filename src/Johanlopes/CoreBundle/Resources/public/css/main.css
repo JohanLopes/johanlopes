@@ -227,14 +227,19 @@ ul#navi .active:after {
 
 	background:#04c3a5;
 	background:rgba(4, 195, 165, 0.95);
-	text-align:center;
-	padding-top:35px;
-	padding-bottom:10px;
+	padding-bottom: 10px;
+    padding-left: 190px;
+    padding-top: 35px;
+    text-align: left;
 	color:#ffffff;
 }
 
-
-
+#anota img {
+    margin-left: -165px;
+    margin-top: -135px;
+    position: absolute;
+    width: 140px;
+}
 
 #anota h1{
 	text-transform:uppercase;
