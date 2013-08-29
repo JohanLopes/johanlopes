@@ -30,78 +30,15 @@
         <section id="works" class="clearfix">
             <!--Portfolio-->
             <ul class="portfolio clearfix">
-
-                <li data-id="id-1" data-type="catWeb" class="item">
-                    <img src="{{ asset('bundles/johanlopescore/images/portfolioImages/img1.jpg') }}" alt="" />
-                    <a class="folio icon" href="{{ asset('bundles/johanlopescore/images/portfolioImages/img.jpg') }}">+</a>
-                    <div class="hgroup">
-                        <h3>Project title goes here</h3>
-                        <h4>In Web design</h4>
-                    </div>
-                </li>
-                <li data-id="id-2" data-type="catWeb" class="item">
-                    <img src="{{ asset('bundles/johanlopescore/images/portfolioImages/img2.jpg') }}" alt="" />
-                    <a class="folio icon" href="{{ asset('bundles/johanlopescore/images/portfolioImages/img.jpg') }}">+</a>
-                    <div class="hgroup"><h3>Project title goes here</h3>
-                        <h4>In Web design</h4>
-                    </div>
-                </li>
-
-                <li data-id="id-3" data-type="catGraphic" class="item">
-                    <img src="{{ asset('bundles/johanlopescore/images/portfolioImages/img1.jpg') }}" alt="" />
-                    <a class="folio icon" href="{{ asset('bundles/johanlopescore/images/portfolioImages/img.jpg') }}">+</a>
-                    <div class="hgroup"><h3>Project title goes here</h3>
-                        <h4>In Web design</h4>
-                    </div>
-                </li>
-
-                <li data-id="id-4" data-type="catGraphic" class="item">
-                    <img src="{{ asset('bundles/johanlopescore/images/portfolioImages/img2.jpg') }}" alt="" />
-                    <a class="folio icon" href="{{ asset('bundles/johanlopescore/images/portfolioImages/img.jpg') }}">+</a>
-                    <div class="hgroup"><h3>Project title goes here</h3>
-                        <h4>In Web design</h4>
-                    </div>
-                </li>
-
-                <li data-id="id-5" data-type="catMotion" class="item">
-                    <img src="{{ asset('bundles/johanlopescore/images/portfolioImages/img1.jpg') }}" alt="" />
-                    <a class="folio icon" href="{{ asset('bundles/johanlopescore/images/portfolioImages/img.jpg') }}">+</a>
-                    <div class="hgroup"><h3>Project title goes here</h3>
-                        <h4>In Web design</h4>
-                    </div>
-                </li>
-
-                <li data-id="id-6" data-type="catMotion" class="item">
-                    <img src="{{ asset('bundles/johanlopescore/images/portfolioImages/img2.jpg') }}" alt="" />
-                    <a class="folio icon" href="{{ asset('bundles/johanlopescore/images/portfolioImages/img.jpg') }}">+</a>
-                    <div class="hgroup"><h3>Project title goes here</h3>
-                        <h4>In Web design</h4>
-                    </div>
-                </li>
-
-                <li data-id="id-7" data-type="catGraphic" class="item">
-                    <img src="{{ asset('bundles/johanlopescore/images/portfolioImages/img1.jpg') }}" alt="" />
-                    <a class="folio icon" href="{{ asset('bundles/johanlopescore/images/portfolioImages/img.jpg') }}">+</a>
-                    <div class="hgroup"><h3>Project title goes here</h3>
-                        <h4>In Web design</h4>
-                    </div>
-                </li>
-
-                <li data-id="id-8" data-type="catWeb" class="item">
-                    <img src="{{ asset('bundles/johanlopescore/images/portfolioImages/img2.jpg') }}" alt="" />
-                    <a class="folio icon" href="{{ asset('bundles/johanlopescore/images/portfolioImages/img.jpg') }}">+</a>
-                    <div class="hgroup"><h3>Project title goes here</h3>
-                        <h4>In Web design</h4>
-                    </div>
-                </li>
-
-                <li data-id="id-9" data-type="catWeb" class="item">
-                    <img src="{{ asset('bundles/johanlopescore/images/portfolioImages/img1.jpg') }}" alt="" />
-                    <a class="folio icon" href="{{ asset('bundles/johanlopescore/images/portfolioImages/img.jpg') }}">+</a>
-                    <div class="hgroup"><h3>Project title goes here</h3>
-                        <h4>In Web design</h4>
-                    </div>
-                </li>
+                {% for i, project in projects %}
+                    <li data-id="id-{{ i }}" data-type="catWeb" class="item">
+                        <img src="{{ project.getWebPath() | apply_filter('project_180') }}" alt="{{ project.name }}" />
+                        <a href="{{ path('project_show', { 'slug': project.slug }) }}" title="Cliquez pour voir le détail de cette réalisation" rel="facebox" class="folio icon">+</a>
+                        <div class="hgroup">
+                            <h3>{{ project.name }}</h3>
+                        </div>
+                    </li>
+                {% endfor %}
             </ul>
             <!--End portfolio-->
         </section>

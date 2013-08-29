@@ -1,0 +1,29 @@
+<div class="project-fiche">
+  <h3>{{ project.name }}</h3>
+  <div class="text-center"><img src="{{ project.getWebPath() | apply_filter('project_600') }}" alt="{{ project.name }}" /></div>
+
+  <div class="space20"></div>
+
+  {% if project.resume is not empty %}
+    <strong>Résumé :</strong><br />
+        {{ project.resume | raw }}
+    <div class="space10"></div>
+  {% endif %}
+
+
+  {% if project.technology is not empty %}
+    <strong>Technologies utilisées :</strong><br />
+    <p class="text-justify">{{ project.technology }}</p>
+    <div class="space10"></div>
+  {% endif %}
+
+
+  {% if project.url is not empty %}
+    <strong>Visitez ce site internet :</strong>&nbsp;&nbsp;
+    {% if project.url|truncate(4,false,'') == "http" %}
+      <strong><a href="{{ project.url }}" target="blank" title="Cliquez pour visiter ce site internet">{{ project.url }}</a></strong>
+    {% else %}
+      <strong>{{ project.url }}</strong>
+    {% endif %}
+  {% endif %}
+</div>

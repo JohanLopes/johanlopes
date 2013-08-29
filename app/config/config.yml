@@ -64,3 +64,33 @@ swiftmailer:
     username:  %mailer_user%
     password:  %mailer_password%
     spool:     { type: memory }
+
+# Stof Doctrine Extensions
+stof_doctrine_extensions:
+    default_locale: %locale%
+    orm:
+        default:
+            sortable:      true
+            sluggable:     true
+
+# Avanlanche (gestionnaire images)
+avalanche_imagine:
+    filters:
+        project_100:
+            type:               thumbnail
+            options:            { size: [100, 100], mode: outbound }
+
+        project_180:
+            type:               thumbnail
+            options:            { size: [180, 140], mode: outbound }
+
+        project_600:
+            type:               thumbnail
+            options:            { size: [600, 600], mode: inset }
+
+# Twig extensions
+services:
+    twig.extension.text:
+        class: Twig_Extensions_Extension_Text
+        tags:
+            - { name: twig.extension }

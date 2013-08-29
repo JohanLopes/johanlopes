@@ -1,3 +1,7 @@
+_imagine:
+    resource: .
+    type:     imagine
+
 johanlopes_core:
     resource: "@JohanlopesCoreBundle/Controller/"
     type:     annotation
