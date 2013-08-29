@@ -3,8 +3,8 @@
     <!--Title-->
     <div class="title">
         <div>
-            <h1>Contact </h1>
-            <h4>Get in touch with me</h4>
+            <h1>Contactez-moi</h1>
+            <h4>Vous avez un projet, une idée, une opportunité professionnelle ? Et si on faisait connaissance ...</h4>
         </div>
         <div class="titleArrow"></div>
     </div>
@@ -21,23 +21,19 @@
 
         <!-- Contact form -->
         <div id="contactForm">
-            <h1 class="mainTitle">feel free to send an email</h1>
+            <h1 class="mainTitle">Prenez le temps de m'envoyer un e-mail</h1>
             <form class="contactForm clearfix"  method="post" action="send.php">
-                <input type="text" name="name" id="name" placeholder="Name *" class="required">
+                <input type="text" name="name" id="name" placeholder="Nom / prénom *" class="required">
                 <!--Error message-->
-                <span class="error" id="err-name">please enter  your name</span>
+                <span class="error" id="err-name">Veuillez renseigner votre e-mail</span>
                 <!--End error message-->
-                <input type="email" name="email" id="email"  placeholder="Email *" class="required ">
-                <!--Error message-->
-                <span class="error" id="err-email">please enter your e-mail</span>
-                <span class="error" id="err-emailvld">e-mail is not a valid format</span>
-                <!--End error message-->
-                <input type="text" name="compagny" id="compagny"  placeholder="Compagny ">
+                <input type="email" name="email" id="email"  placeholder="E-mail *" class="required ">
+                <input type="text" name="compagny" id="compagny"  placeholder="Société">
                 <textarea name="message" id="message"  cols="45" rows="10" placeholder="Message *" class="required "></textarea>
                 <!--Error message-->
                 <span class="error" id="err-message">please enter  your message</span>
                 <!--End error message-->
-                <input type="submit" name="submit" id="submit" value="Send your message">
+                <input type="submit" name="submit" id="submit" value="Envoyer votre message">
             </form>
             <div id="success"><h2>Your message has been sent. Thank you!</h2></div>
         </div>
@@ -46,39 +42,37 @@
 
         <!--Contact information-->
         <div id="info">
-            <h1 class="mainTitle">Personal Info</h1>
+            <h1 class="mainTitle">Informations personnelles</h1>
 
             <!--Personal info-->
             <div class="pInfo">
                 <div class="pinfoInner">
-                    <b>Name</b> :   John Smithy Doe<br>
-                    <b>Birth</b> :  1982 / 01 / 27<br>
-                    <b>Phone</b> :  + 123-456-789<br>
-                    <b>Email</b> :  contact@email.com<br>
-                    <b>Addresse</b> :   123 University Ave 2nd Address Line<br>
-                    <b>Website</b> :    www.sitename.com
+                    <b>Prénom / Nom</b> : Johan LOPES<br>
+                    <b>Date de naissance</b> : 01 / 08 / 2013<br>
+                    <b>Téléphone</b> : 06 09 34 09 51<br>
+                    <b>E-mail</b> : lopes.johan@gmail.com<br>
+                    <b>Adresse</b> : 30 rue des Alpes - 38290 LA VERPILLIERE<br>
+                    <b>Site web</b> : www.johanlopes.com<br />
+                    Permis B - Véhicule personnel
                 </div>
             </div>
             <!--End personal info-->
 
-            <!--Compagny info-->
-            <div class="cInfo">
-                <h1 class="mainTitle">Compagny Info</h1>
-                <p>
-                    <b>Adresse</b> : <br>The Company Name Inc.<br>
-                    1234 Street Road,<br>
-                    City Name, IN 567 890.
-                </p>
-                <p>
-                    <b>Email</b> : name@companyname.com<br>
-                    <b>Web</b> : http://www.sitename.com<br>
-                    <b>Tel</b> :   + 123-456-789<br>
-                    <b>Fax</b> :  + 123-456-789
-                </p>
-            </div>
-            <!--End compagny info-->
         </div>
         <!--End contact information-->
+
+        <div id="social">
+            <h1 class="mainTitle">Mes réseaux sociaux</h1>
+            <div class="socialInner">
+                <p><i class="icon-viadeo"></i> Viadeo : <a href="http://fr.viadeo.com/fr/profile/johan.lopes1" target="_blank" title="Viadeo">http://fr.viadeo.com/fr/profile/johan.lopes1</a></p>
+                <p><i class="icon-linkedin-1"></i> LinkedIn : <a href="http://fr.linkedin.com/in/lopesjohan" target="_blank" title="LinkedIn">http://fr.linkedin.com/in/lopesjohan</a></p>
+                <p><i class="icon-twitter-1"></i>Twitter : <a href="http://twitter.com/johan_lopes" target="_blank" title="Twitter">http://twitter.com/johan_lopes</a></p>
+                <p><i class="icon-gplus-1"></i> Google+ : <a href="http://plus.google.com/102081484632369700589" target="_blank" title="Google +">http://plus.google.com/102081484632369700589</a></p>
+                <p><i class="icon-facebook-1"></i> Facebook : <a href="http://www.facebook.com/lopes.johan" target="_blank" title="Facebook">http://www.facebook.com/lopes.johan</a></p>
+                <p><i class="icon-github-circled-1"></i> Github : <a href="http://github.com/JohanLopes" target="_blank" title="GitHub">http://github.com/JohanLopes</a></p>
+                <p><i class="icon-stackoverflow"></i> StackOverflow : <a href="http://stackoverflow.com/users/2091209" target="_blank" title="StackOverflow">http://stackoverflow.com/users/2091209</a></p>
+            </div>
+        </div>
 
     </div>
     <!--Inner contact-->

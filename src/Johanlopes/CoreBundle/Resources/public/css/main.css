@@ -7,7 +7,7 @@ html, body, div, section, article, aside, header, hgroup, footer, nav, h1, h2, h
 	font: inherit;
 	text-decoration:none;
 	list-style:none;
-	
+
 }
 
 a,a:active,a:hover {outline: none;}
@@ -29,14 +29,14 @@ address, article, aside, canvas, details, figcaption, figure, footer, header, hg
 
 
 body{
-	
+
 	font:12px Arial,sans-serif;
 	font-weight:normal;
 	font-style:normal;
 	position:relative;
 	line-height:20px;
 	background:#efefef;
-	
+
 }
 
 /*Wrapper*/
@@ -44,7 +44,7 @@ body{
 #wrapper{
 	width:100%;
 	margin-bottom:100px;
-	
+
 }
 
 /*End wrapper*/
@@ -54,7 +54,7 @@ body{
 /*Header*/
 
 #header {
-	
+
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -71,15 +71,15 @@ body{
 }
 
 #innerHeader {
-	
+
 	height:45px;
 	border-bottom:1px solid #04c3a5;
-	
+
 }
 
 
 header, #innerContent{
-	
+
 	width:900px;
 	margin: 0 auto;
 	position:relative;
@@ -120,14 +120,14 @@ h2{
 }
 
 #mainNav li {
-	
+
 	display:inline-block;
 	font-family:'Open Sans';
 	margin-right:25px;
 }
 
 ul#navi li a {
-    
+
     color: #444444;
     display: inline-block;
     font-size: 12px;
@@ -184,7 +184,7 @@ ul#navi .active:after {
 	line-height:28px;
 	background:#04C3A5;
 	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-	
+
 }
 
 
@@ -198,7 +198,7 @@ ul#navi .active:after {
 
 #socials li:hover, #socials a:hover{
 	background:  #444444;
-	
+
 }
 
 
@@ -207,24 +207,24 @@ ul#navi .active:after {
 
 /*Slider*/
 #slider {
-	
+
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
-	
+
 }
 /*End slider */
 
 /*Inner Content*/
 #innerContent{
-	
+
 	margin-top:200px;
 	color:#666666;
 }
 
 #anota{
-		
+
 	background:#04c3a5;
 	background:rgba(4, 195, 165, 0.95);
 	text-align:center;
@@ -255,7 +255,7 @@ ul#navi .active:after {
 	margin-right:20px;
 	position:relative;
 	top:-2px;
-	
+
 }
 
 #anota h1:after{
@@ -263,7 +263,7 @@ ul#navi .active:after {
 	position:relative;
 	top:-2px;
 	content:"]";
-	
+
 }
 
 #anota .arrAnota {
@@ -404,15 +404,15 @@ h1.mainTitle:after {
 }
 
 
-#education h4, #experience h4 {
-	
+#education h4, #experience h4, #skills h4, #langs h4 {
+
     color: #04c3a5;
     font-size: 12px;
     font-weight: bold;
 }
 
 #education h6, #experience h6 {
-	
+
     color: #333333;
     font-size: 11px;
     font-style: italic;
@@ -420,9 +420,17 @@ h1.mainTitle:after {
 }
 
 #education p, #experience p {
-	
+
     color: #999999;
 
+}
+
+#langs p, #hobbies p {
+    margin-bottom: 8px;
+}
+
+#hobbies a {
+    color: #04C3A5;
 }
 
 .box{
@@ -461,7 +469,7 @@ h1.mainTitle:after {
 	background:#ffffff;
 	padding-left:10px;
 	padding-right:10px;
-	
+
 }
 
 .columns_Three h2:before{
@@ -561,96 +569,7 @@ h1.mainTitle:after {
 /*End about me */
 
 
-/*Skills */
-#skills{
-	margin-top:35px;
-	margin-bottom:35px;
-	padding-bottom:35px;
-	background:#ffffff;
-}
-
-#innerSkills{
-	padding-left:20px;
-	padding-right:20px;
-	margin-top:20px;
-}
-
-#skill{
-	width:430px;
-	float:left;
-	margin-right:60px;
-}
-
-#skillsHolder {
-    margin-top: 30px;
-}
-
-.skillBar {
-    margin-bottom: 10px;
-}
-
-.skillbarHolder {
-    background-color: #efefef;
-    height: 30px;
-    position: relative;
-	border-radius:15px;
-	-moz-border-radius:15px ;
-	-o-border-radius: 15px ;
-	-ms-border-radius: 15px ;
-	-webkit-border-radius: 15px ;
-}
-
-.skillbarTitle {
-    color: #ffffff;
-    font-style: italic;
-    left: 15px;
-    position: absolute;
-    text-transform: uppercase;
-    top: 7px;
-    z-index: 10;
-}
-
-
-.percentage {
-
-  background-color: #04C3A5;
-  background: #04C3A5;
-  background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  height: 30px;
- -webkit-background-size: 30px 30px;
- -moz-background-size:    30px 30px;
- -o-background-size:      30px 30px;
-  background-size:         30px 30px;
-  left: 0;
-  position: absolute;
-   border-radius:15px ;
-	-moz-border-radius:15px ;
-	-o-border-radius: 15px ;
-	-ms-border-radius: 15px ;
-	-webkit-border-radius: 15px ;
-    top: 0;
-
-	
-	
-}
-
-
-.percent90 {
-    width: 90%;
-}
-.percent50 {
-    width: 70%;
-}
-.percent60 {
-    width: 60%;
-}
-
-.percent65 {
-    width: 65%;
-}
-
+/*testimonials */
 
 #testimonials{
 	width:340px;
@@ -674,21 +593,21 @@ h1.mainTitle:after {
 
 #testimonials blockquote{
 	font-family:Georgia;
-	font-size:14px; 
+	font-size:14px;
 	font-style:italic;
 	color:#666666;
 }
 
 
 .testimoniaContainer h3{
-	
+
 	float:right;
 	margin-top:19px;
 	font-weight:bold;
 	color:#04C3A5;
 }
 .testimoniaContainer h3 span{
-	
+
 	font-size:11px;
 	font-style:italic;
 	font-weight:normal;
@@ -713,7 +632,7 @@ h1.mainTitle:after {
 	display:none;
 }
 
-/*End skills */
+/*End testimonials */
 
 
 /*Portfolio*/
@@ -733,31 +652,31 @@ h1.mainTitle:after {
 
 
 #filternavHolder{
-	
+
 	text-align:center;
 	border-bottom:1px solid #efefef;
-	margin-bottom:30px;	
+	margin-bottom:30px;
 }
 
 ul#category {
-	
+
     margin-top: 10px;
 	margin-left:26%;
-	
+
 }
 
 ul#category li {
-	
+
     display: table-cell;
     height: 40px;
 	font-family:'Open Sans';
 	text-align:center;
 	border-bottom: 2px solid #ffffff;
-		
+
 }
 
 ul#category li a {
-	
+
     color: #444444;
     display:block;
     font-size: 12px;
@@ -770,7 +689,7 @@ ul#category li a {
 
 #category .current {
 	border-bottom: 2px solid #04c3a5;
-	
+
 }
 
 
@@ -788,12 +707,12 @@ ul#category .current a:after {
 
 
 #works .portfolio{
-	
+
 	margin-right:-30px;
 }
 
 #works .item{
-	
+
 	float:left;
 	margin-right:27px;
 	margin-bottom:20px;
@@ -845,7 +764,7 @@ ul#category .current a:after {
 	margin-bottom:35px;
 	padding-bottom:35px;
 	background:#ffffff;
-	
+
 }
 
 #innerContact{
@@ -856,19 +775,19 @@ ul#category .current a:after {
 
 
 #mapHolder{
-	
+
 	border:1px solid #efefef;
 	padding:5px;
 }
 
 #map{
-	
+
 	height:300px;
 }
 
 
 #contactForm{
-	
+
 	width:470px;
 	float:left;
 	margin-right:18px;
@@ -882,7 +801,7 @@ form{
 
 
 #success{
-	
+
 	display:none;
 }
 
@@ -894,7 +813,7 @@ form{
 }
 
 .error {
-	
+
 	color: #cd3359;
 	display: none;
 	position:relative;
@@ -903,7 +822,7 @@ form{
 }
 
 #contactForm input[type="text"], input[type="email"],input[type="number"], #contactForm textarea{
-	
+
 	margin-bottom:15px;
 	padding-left:10px;
 	background: #ffffff;
@@ -917,13 +836,13 @@ form{
 
 
 #contactForm input[type="text"],  #contact input[type="email"], #contact input[type="text"], #contact input[type="number"] {
-	
+
 	width: 450px;
 	height: 35px;
 }
 
 #contactForm textarea {
-	
+
 	width: 450px;
 	height: 200px;
 	display: block;
@@ -932,7 +851,7 @@ form{
 }
 
 #contactForm input#submit {
-	
+
 	background:#04C3A5;
     border: 2px solid #04C3A5;
     border-radius: 4px ;
@@ -958,16 +877,16 @@ form{
 
 
 #contactForm input#submit:hover{
-	
+
 	background:#ffffff;
 	color:#04C3A5;
-	
+
 
 }
 
 
-#info{
-	
+#info, #social{
+
 	width:345px;
 	float:left;
 	margin-top:15px;
@@ -988,18 +907,8 @@ form{
 	margin-right:20px;
 }
 
-.cInfo {
-	margin-top:20px;
-}
-
-.cInfo > p{
-	
-	padding-bottom:12px;
-}
-
-
-.cInfo > p b{
-	color:#444;
+#social a {
+    color: #04C3A5;
 }
 
 /*End contact*/
@@ -1013,7 +922,7 @@ form{
 
 
 #twitter {
-	
+
     background:#333333;
     font-size: 12px;
     padding: 35px 0 35px;
@@ -1022,7 +931,7 @@ form{
 
 
 #innerTwitter .icon-twitter-bird-footer {
-	
+
     padding-top: 25px;
 	padding-left:40px;
 	padding-right:40px;
@@ -1063,13 +972,13 @@ form{
 
 
 #socialsFooter {
-	
+
     margin-left: 365px;
     margin-top: 12px;
 }
 
 #socialsFooter li, #socialsFooter a{
-	
+
 	display:table-cell;
 	width:24px;
 	height:20px;
@@ -1086,7 +995,7 @@ form{
 
 #socialsFooter li:hover, #socialsFooter a:hover{
 	color:  #ffffff;
-	
+
 }
 
 
@@ -1146,8 +1055,8 @@ form{
 	#testimonials:after {left: 140px;top: 130px;}
 	#testimonials .testimoniaContainer{height:200px;}
 	.testimoniaContainer h3{margin-top:40px;}
-	
-	
+
+
 	ul#category{margin-left:22%;}
 	#works .item{width:201px;}
 	ul li.item a, .link{width:342px;height:201px;}
@@ -1197,7 +1106,7 @@ form{
 	.arrowFeed {left: 191px;top: 259px;}
 	.tweet_list{height:145px;}
 	#socialsFooter{margin-left:120px;}
-	
+
 }
 
 
@@ -1229,7 +1138,7 @@ form{
 	#testimonials .testimoniaContainer{height:237px;}
 	#testimonials:after {left: 75px;top: 175px;}
 
-	ul#category{margin-left:0;} 
+	ul#category{margin-left:0;}
 	ul#category li a{padding:5px 6px;}
 	ul#category .current a:after{bottom:-1px;}
 	#works a{width:40px;height:40px;line-height:40px;}
@@ -1243,7 +1152,7 @@ form{
 	.arrowFeed {left: 109px;top: 384px;}
 	#pageFooter{padding:40px 22px 38px;}
 	#socialsFooter{margin-left:30px;}
-	
+
 }
 
 
