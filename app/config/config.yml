@@ -78,7 +78,7 @@ avalanche_imagine:
     filters:
         project_268:
             type:               thumbnail
-            options:            { size: [268, 188], mode: outbound }
+            options:            { size: [268, 168], mode: outbound }
 
         project_456:
             type:               thumbnail
