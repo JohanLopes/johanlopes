@@ -277,7 +277,7 @@ ul#navi .active:after {
     position: relative;
     top: 13px;
 	height: 10px;
-	left:50%;
+	left:260px;
 	transform: rotate(45deg);
 	-ms-transform: rotate(45deg); /* IE 9 */
 	-ms-transform-origin:20% 40%; /* IE 9 */
@@ -525,16 +525,6 @@ h1.mainTitle:after {
 	position:relative;
 }
 
-#quote:after {
-    background: none repeat scroll 0 0 #04C3A5;
-	    bottom: 174px;
-	    content: "";
-	    height: 1px;
-	    left: 43%;
-	    position: absolute;
-	    width: 120px;
-}
-
 #quote h1 {
     font-size: 26px;
     font-weight: 200;
@@ -759,6 +749,50 @@ ul#category .current a:after {
 	font-weight:100;
 }
 
+#work {
+    width: 850px;
+    padding: 10px;
+}
+
+#work .visu {
+    background: url('./../images/imac.png') no-repeat center;
+    width: 500px;
+    height: 455px;
+    float: left;
+    text-align: center;
+}
+
+#work .visu img {
+    width: 456px;
+    height: 285px;
+    margin-top: 14px;
+}
+
+#work .info {
+    margin-left: 520px;
+}
+
+#work .info h3 {
+    color: #04C3A5;
+    font-weight: bold;
+}
+
+#work .info p {
+    margin-bottom: 10px;
+    color: #666;
+    text-align: justify;
+}
+
+#work .info a {
+    color: #666;
+    border-bottom-width: 1px;
+    border-bottom-style: dotted;
+    border-bottom-color: #04C3A5;
+}
+
+#work .info a:hover {
+    color: #04C3A5;
+}
 
 /*End portfolio*/
 
@@ -978,7 +1012,7 @@ form{
 
 #socialsFooter {
 
-    margin-left: 365px;
+    margin-left: 352px;
     margin-top: 12px;
 }
 

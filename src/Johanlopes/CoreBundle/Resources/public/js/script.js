@@ -228,8 +228,8 @@ var styles = [
 			// Create a map object, and include the MapTypeId to add
 			// to the map type control.
 		      mapOptions = {
-		          zoom: 9,
-		          center: new google.maps.LatLng( lat, lng ),
+		          zoom: 10,
+		          center: new google.maps.LatLng(45.698938,4.947071),
 		          mapTypeControlOptions: {
 		              mapTypeIds: [google.maps.MapTypeId.ROADMAP]
 		          }
@@ -269,10 +269,25 @@ $('#testimonials').slides({
 
 //-------------------------------------------------Flex slider --------------------------------------------------//
 $('.flexslider').flexslider({
-   animation: "fade"
+    animation: "fade"
 });
 //------------------------------------------------- End flex slider --------------------------------------------------//
 
+//-------------------------------------------------Tweets --------------------------------------------------//
+$(".icon-twitter-bird-footer").tweet({
+	join_text: false,
+	username: "johan_lopes", // Change username here
+	modpath: '/bundles/johanlopescore/twitter/',
+	avatar_size: false,
+	count: 1,
+	auto_join_text_default: ' we said, ',
+	auto_join_text_ed: ' we ',
+	auto_join_text_ing: ' we were ',
+	auto_join_text_reply: ' we replied to ',
+	auto_join_text_url: ' we were checking out ',
+	loading_text: 'Chargement des tweets...'
+});
+//------------------------------------------------- End Tweets --------------------------------------------------//
 
 });
 

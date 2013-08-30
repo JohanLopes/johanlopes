@@ -80,9 +80,9 @@ avalanche_imagine:
             type:               thumbnail
             options:            { size: [268, 188], mode: outbound }
 
-        project_600:
+        project_456:
             type:               thumbnail
-            options:            { size: [600, 600], mode: inset }
+            options:            { size: [456, 285], mode: outbound }
 
 # Twig extensions
 services:

@@ -33,7 +33,7 @@
                 {% for project in projects %}
                     <li data-id="id-{{ project.slug }}" data-type="{% for category in project.categories %}{{ category.slug }} {% endfor %}" class="item">
                         <img src="{{ project.getWebPath() | apply_filter('project_268') }}" alt="{{ project.name }}" />
-                        <a href="{{ path('project_show', { 'slug': project.slug }) }}" rel="facebox" class="folio icon">+</a>
+                        <a href="{{ path('project_show', { 'slug': project.slug }) }}" class="folio icon">+</a>
                         <div class="hgroup">
                             <h3>{{ project.name }}</h3>
                         </div>

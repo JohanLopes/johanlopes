@@ -1,27 +1,30 @@
-<div class="project">
-  <h3>{{ project.name }}</h3>
+<div id="work">
+    <h1 class="mainTitle">{{ project.name }}</h3>
 
-  <img src="{{ project.getWebPath() | apply_filter('project_600') }}" alt="{{ project.name }}" />
+    <div class="visu">
+        <img src="{{ project.getWebPath() | apply_filter('project_456') }}" alt="{{ project.name }}" />
+    </div>
 
-  {% if project.resume is not empty %}
-  <strong>Résumé :</strong><br />
-  {{ project.resume | raw }}
-  {% endif %}
-
-
-  {% if project.technology is not empty %}
-  <strong>Technologies utilisées :</strong><br />
-  <p class="text-justify">{{ project.technology }}</p>
-  <div class="space10"></div>
-  {% endif %}
+    <div class="info">
+        {% if project.resume is not empty %}
+            <h3>A propos du projet :</h3>
+            <p>{{ project.resume | raw }}</p>
+        {% endif %}
 
 
-  {% if project.url is not empty %}
-  <strong>Visitez ce site internet :</strong>&nbsp;&nbsp;
-  {% if project.url|truncate(4,false,'') == "http" %}
-  <strong><a href="{{ project.url }}" target="blank" title="Cliquez pour visiter ce site internet">{{ project.url }}</a></strong>
-  {% else %}
-  <strong>{{ project.url }}</strong>
-  {% endif %}
-  {% endif %}
+        {% if project.technology is not empty %}
+            <h3>Technologies utilisées :</h3>
+            <p>{{ project.technology }}</p>
+        {% endif %}
+
+
+        {% if project.url is not empty %}
+            <h3>Visitez ce site internet :</h3>
+            {% if project.url|truncate(4,false,'') == "http" %}
+                <p><strong><a href="{{ project.url }}" target="blank" title="Cliquez pour visiter ce site internet">{{ project.url }}</a></strong></p>
+            {% else %}
+                <p><strong>{{ project.url }}</strong></p>
+            {% endif %}
+        {% endif %}
+    </div>
 </div>
