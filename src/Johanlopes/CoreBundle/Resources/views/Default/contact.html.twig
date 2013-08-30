@@ -22,20 +22,13 @@
         <!-- Contact form -->
         <div id="contactForm">
             <h1 class="mainTitle">Prenez le temps de m'envoyer un e-mail</h1>
-            <form class="contactForm clearfix"  method="post" action="send.php">
-                <input type="text" name="name" id="name" placeholder="Nom / prénom *" class="required">
-                <!--Error message-->
-                <span class="error" id="err-name">Veuillez renseigner votre e-mail</span>
-                <!--End error message-->
-                <input type="email" name="email" id="email"  placeholder="E-mail *" class="required ">
-                <input type="text" name="compagny" id="compagny"  placeholder="Société">
-                <textarea name="message" id="message"  cols="45" rows="10" placeholder="Message *" class="required "></textarea>
-                <!--Error message-->
-                <span class="error" id="err-message">please enter  your message</span>
-                <!--End error message-->
-                <input type="submit" name="submit" id="submit" value="Envoyer votre message">
+
+            <form class="contactForm clearfix"  method="post" action="{{ path('contact') }}">
+
+                <div id="contactFormInner">
+                    {% render(controller('JohanlopesCoreBundle:Default:contactForm')) %}
+                </div>
             </form>
-            <div id="success"><h2>Your message has been sent. Thank you!</h2></div>
         </div>
         <!-- End contact form -->
 

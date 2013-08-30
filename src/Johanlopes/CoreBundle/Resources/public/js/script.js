@@ -123,57 +123,15 @@ var sections = $("section");
 //---------------------------------- Forms validation -----------------------------------------//
 
 	/*click handler on the submit button*/
-	$('#submit').click(function(){
-		$('.error').fadeOut('slow');
-
-		var error = false;
-		var name = $('input#name').val();
-		if(name == "" || name == " ") {
-			$('#err-name').fadeIn('slow');
-			error = true;
-		}
-
-
-			var msg = $('textarea#message').val();
-			if(msg == "" || msg == " ") {
-				$('#err-message').fadeIn('slow');
-				error = true;
-			}
-
-		var email_compare = /^([a-z0-9_.-]+)@([da-z.-]+).([a-z.]{2,6})$/;
-		var email = $('input#email').val();
-		if (email == "" || email == " ") {
-			$('#err-email').fadeIn('slow');
-			error = true;
-		}else if (!email_compare.test(email)) {
-			$('#err-emailvld').fadeIn('slow');
-			error = true;
-		}
-
-		if(error == true) {
-			return false;
-		}
-
-		var data_string = $('.contactForm').serialize();
-
-
+	$('.contactForm').on('submit', function(){
 		$.ajax({
 			type: "POST",
-			url: $('.contactForm').attr('action'),
-			data: data_string,
+			url: $(this).attr('action'),
+			data: $(this).serialize(),
 			timeout: 6000,
-			error: function(request,error) {
-				if (error == "timeout") {
-					$('#err-timedout').fadeIn('slow');
-				}
-				else {
-					$('#err-state').fadeIn('slow');
-					$("#err-state").html('An error occurred: ' + error + '');
-				}
-			},
-			success: function() {
-					$('#success').fadeIn('slow');
-						}
+			success: function(data) {
+				$('#contactFormInner').html(data);
+			}
 		});
 
 		return false;

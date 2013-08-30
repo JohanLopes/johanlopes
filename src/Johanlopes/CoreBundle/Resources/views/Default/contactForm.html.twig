@@ -1,0 +1,28 @@
+{% form_theme form 'JohanlopesCoreBundle:Form:contact.html.twig' %}
+
+{% if sent %}
+    <div id="success">
+        <h2>Votre demande a bien été envoyée, <br />vous recevrez une réponse dans quelques jours</h2>
+        <p>Je vous remercie de l'interêt que vous portez à mon profil, <br />n'hésitez pas à me contacter aussi via les réseaux sociaux professionnels : <br /></p>
+        <ul>
+            <li><i class="icon-viadeo"></i> Viadeo : <a href="http://fr.viadeo.com/fr/profile/johan.lopes1" target="_blank" title="Viadeo">http://fr.viadeo.com/fr/profile/johan.lopes1</a></li>
+            <li><i class="icon-linkedin-1"></i> LinkedIn : <a href="http://fr.linkedin.com/in/lopesjohan" target="_blank" title="LinkedIn">http://fr.linkedin.com/in/lopesjohan</a></li>
+        </ul>
+        <h3>Merci !</h3>
+    </div>
+{% else %}
+    {{ form_widget(form.name, {'attr': {'placeholder': 'Nom / Prénom *'}}) }}
+    {{ form_errors(form.name) }}
+
+    {{ form_widget(form.email, {'attr': {'placeholder': 'E-mail *'}}) }}
+    {{ form_errors(form.email) }}
+
+    {{ form_widget(form.company, {'attr': {'placeholder': 'Société'}}) }}
+    {{ form_errors(form.company) }}
+
+    {{ form_widget(form.message, {'attr': {'placeholder': 'Message *', 'cols': '45', 'rows': '10'}}) }}
+    {{ form_errors(form.message) }}
+
+    {{ form_rest(form) }}
+    <input type="submit" name="submit" id="submit" value="Envoyer votre message">
+{% endif %}
