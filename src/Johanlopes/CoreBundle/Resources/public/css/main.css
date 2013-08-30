@@ -962,6 +962,16 @@ form{
 	margin-right:20px;
 }
 
+.pInfo a {
+    color: #ffffff;
+}
+
+.pInfo a:hover {
+    border-bottom-width: 1px;
+    border-bottom-style: dotted;
+    border-bottom-color: #ffffff;
+}
+
 #social a {
     color: #04C3A5;
 }
