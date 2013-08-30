@@ -14,10 +14,10 @@
     <div id="filternavHolder">
         <!-- Filter nav -->
         <ul id="category" class="filter">
-            <li class="all current"><a href="#">All Work</a></li>
-            <li class="catWeb"><a href="#">Web Design</a></li>
-            <li class="catGraphic"><a href="#">Graphic Design</a></li>
-            <li class="catMotion"><a href="#">Motion Graphic</a></li>
+            <li class="all current"><a href="#">Tous</a></li>
+            {% for category in categories %}
+                <li class="{{ category.slug }}"><a href="#">{{ category.name }}</a></li>
+            {% endfor %}
         </ul>
         <!-- End filter nav -->
     </div>
@@ -30,10 +30,10 @@
         <section id="works" class="clearfix">
             <!--Portfolio-->
             <ul class="portfolio clearfix">
-                {% for i, project in projects %}
-                    <li data-id="id-{{ i }}" data-type="catWeb" class="item">
-                        <img src="{{ project.getWebPath() | apply_filter('project_180') }}" alt="{{ project.name }}" />
-                        <a href="{{ path('project_show', { 'slug': project.slug }) }}" title="Cliquez pour voir le détail de cette réalisation" rel="facebox" class="folio icon">+</a>
+                {% for project in projects %}
+                    <li data-id="id-{{ project.slug }}" data-type="{% for category in project.categories %}{{ category.slug }} {% endfor %}" class="item">
+                        <img src="{{ project.getWebPath() | apply_filter('project_268') }}" alt="{{ project.name }}" />
+                        <a href="{{ path('project_show', { 'slug': project.slug }) }}" rel="facebox" class="folio icon">+</a>
                         <div class="hgroup">
                             <h3>{{ project.name }}</h3>
                         </div>

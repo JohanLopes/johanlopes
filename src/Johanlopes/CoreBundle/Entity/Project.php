@@ -4,6 +4,7 @@ namespace Johanlopes\CoreBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * Johanlopes\CoreBundle\Entity\Project
@@ -79,6 +80,21 @@ class Project
      */
     private $file;
 
+    /**
+     * @var ArrayCollection $categories
+     *
+     * @ORM\ManyToMany(targetEntity="Johanlopes\CoreBundle\Entity\Category", inversedBy="projects")
+     * @ORM\JoinTable(name="project_category")
+     */
+    private $categories;
+
+    /**
+     * Construct
+     */
+    public function __construct()
+    {
+        $this->categories = new ArrayCollection();
+    }
 
     /**
      * Get id
@@ -294,5 +310,60 @@ class Project
 
         // clean up the file property as you won't need it anymore
         $this->file = null;
+    }
+
+    /**
+     * Add categories
+     *
+     * @param  Johanlopes\CoreBundle\Entity\Category $category
+     * @return Project
+     */
+    public function addCategory(\Johanlopes\CoreBundle\Entity\Category $category)
+    {
+        if (!$this->categories->contains($category)) {
+            $this->categories->add($category);
+        }
+
+        return $this;
+    }
+
+    /**
+     * Get categories
+     *
+     * @return Doctrine\Common\Collections\Collection
+     */
+    public function getCategories()
+    {
+        return $this->categories;
+    }
+
+    /**
+     * Set categories
+     *
+     * @param ArrayCollection $categories
+     *
+     * @return Satellite
+     */
+    public function setCategories(ArrayCollection $categories)
+    {
+        $this->clearCategories();
+
+        foreach ($categories as $category) {
+            $this->addCategory($category);
+        }
+
+        return $this;
+    }
+
+    /**
+     * Clear categories
+     *
+     * @return Satellite
+     */
+    public function clearCategories()
+    {
+        $this->categories = new ArrayCollection();
+
+        return $this;
     }
 }

@@ -30,6 +30,13 @@ class Category
     private $name;
 
     /**
+     * @var ArrayCollection $projects
+     *
+     * @ORM\ManyToMany(targetEntity="Johanlopes\CoreBundle\Entity\Project", mappedBy="categories")
+     */
+    private $projects;
+
+    /**
      * @var integer
      *
      * @Gedmo\SortablePosition
@@ -45,6 +52,13 @@ class Category
      */
     private $slug;
 
+    /**
+     * Construct
+     */
+    public function __construct()
+    {
+        $this->projects = new ArrayCollection();
+    }
 
     /**
      * Get id
@@ -77,6 +91,29 @@ class Category
     public function getName()
     {
         return $this->name;
+    }
+
+    /**
+     * Add project
+     *
+     * @param  Johanlopes\CoreBundle\Entity\Project $project
+     * @return Category
+     */
+    public function addProject(\Johanlopes\CoreBundle\Entity\Project $project)
+    {
+        $this->projects[] = $project;
+
+        return $this;
+    }
+
+    /**
+     * Get projects
+     *
+     * @return Doctrine\Common\Collections\Collection
+     */
+    public function getProjects()
+    {
+        return $this->projects;
     }
 
     /**

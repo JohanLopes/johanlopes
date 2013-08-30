@@ -76,13 +76,9 @@ stof_doctrine_extensions:
 # Avanlanche (gestionnaire images)
 avalanche_imagine:
     filters:
-        project_100:
+        project_268:
             type:               thumbnail
-            options:            { size: [100, 100], mode: outbound }
-
-        project_180:
-            type:               thumbnail
-            options:            { size: [180, 140], mode: outbound }
+            options:            { size: [268, 188], mode: outbound }
 
         project_600:
             type:               thumbnail
