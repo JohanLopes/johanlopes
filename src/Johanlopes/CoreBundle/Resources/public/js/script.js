@@ -5,7 +5,7 @@ $(document).ready(function(){
 
 //--------- Scroll navigation ---------------//
 
-$("#mainNav a, #quote a, #logo a").click(function(event){
+$("#mainNav a, #quote a.contact, #logo a").click(function(event){
 
 	event.preventDefault();
 	var full_url = this.href;
