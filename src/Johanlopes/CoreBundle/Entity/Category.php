@@ -73,7 +73,8 @@ class Category
     /**
      * Set name
      *
-     * @param  string   $name
+     * @param string $name
+     *
      * @return Category
      */
     public function setName($name)
@@ -96,7 +97,8 @@ class Category
     /**
      * Add project
      *
-     * @param  Johanlopes\CoreBundle\Entity\Project $project
+     * @param Johanlopes\CoreBundle\Entity\Project $project
+     *
      * @return Category
      */
     public function addProject(\Johanlopes\CoreBundle\Entity\Project $project)
@@ -119,7 +121,8 @@ class Category
     /**
      * Set rank
      *
-     * @param  integer  $rank
+     * @param integer $rank
+     *
      * @return Category
      */
     public function setRank($rank)
@@ -142,7 +145,8 @@ class Category
     /**
      * Set slug
      *
-     * @param  string   $slug
+     * @param string $slug
+     *
      * @return Category
      */
     public function setSlug($slug)

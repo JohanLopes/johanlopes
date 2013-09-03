@@ -266,28 +266,52 @@ class Project
         $this->file = $file;
     }
 
+    /**
+     * Get Image absolute path
+     * @return string
+     */
     public function getAbsolutePath()
     {
         return null === $this->image ? null : $this->getUploadRootDir().'/'.$this->image;
     }
 
+    /**
+     * Get image web path
+     * @return string
+     */
     public function getWebPath()
     {
         return null === $this->image ? null : '/' . $this->getUploadDir().'/'.$this->image;
     }
 
+    /**
+     * Get image upload root dir
+     * @param string $basepath
+     *
+     * @return string
+     */
     protected function getUploadRootDir($basepath)
     {
         // the absolute directory path where uploaded documents should be saved
         return $basepath.$this->getUploadDir();
     }
 
+    /**
+     * Get image upload dir
+     * @return string
+     */
     protected function getUploadDir()
     {
         // get rid of the __DIR__ so it doesn't screw when displaying uploaded doc/image in the view.
         return 'uploads/projects';
     }
 
+    /**
+     * Image upload
+     * @param string $basepath
+     *
+     * @return mixed
+     */
     public function upload($basepath)
     {
         // the file property can be empty if the field is not required
@@ -315,7 +339,8 @@ class Project
     /**
      * Add categories
      *
-     * @param  Johanlopes\CoreBundle\Entity\Category $category
+     * @param Johanlopes\CoreBundle\Entity\Category $category
+     *
      * @return Project
      */
     public function addCategory(\Johanlopes\CoreBundle\Entity\Category $category)

@@ -12,6 +12,10 @@ use Doctrine\ORM\EntityRepository;
  */
 class CategoryRepository extends EntityRepository
 {
+    /**
+     * Find all categories sorted
+     * @return ArrayCollection
+     */
     public function findAllSorted()
     {
         $query = $this->createQueryBuilder('c')

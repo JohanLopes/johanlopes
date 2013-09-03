@@ -12,6 +12,11 @@ use Doctrine\ORM\EntityRepository;
  */
 class ProjectRepository extends EntityRepository
 {
+    /**
+     * Find projects sorted
+     *
+     * @return ArrayCollection
+     */
     public function findAllSorted()
     {
         $query = $this->createQueryBuilder('p')
@@ -53,12 +58,17 @@ class ProjectRepository extends EntityRepository
         }
     }
 
+    /**
+     * Get final position
+     *
+     * @return integer
+     */
     public function getFinalPosition()
     {
         $q = $this->createQueryBuilder('c')
-        ->select('c.rank')
-        ->orderBy('c.rank','desc')
-        ->setMaxResults(1);
+            ->select('c.rank')
+            ->orderBy('c.rank', 'desc')
+            ->setMaxResults(1);
 
         $last = $q->getQuery()->getSingleResult();
         $finalPosition = $last ? $last['rank'] : 1;

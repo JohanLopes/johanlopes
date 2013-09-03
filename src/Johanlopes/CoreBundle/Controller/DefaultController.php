@@ -7,11 +7,15 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Johanlopes\CoreBundle\Form\ContactType;
 
+/**
+ * Default controller
+ */
 class DefaultController extends Controller
 {
     /**
      * @Route("/", name="homepage")
      * @Template()
+     * @return array
      */
     public function indexAction()
     {
@@ -20,6 +24,7 @@ class DefaultController extends Controller
 
     /**
      * @Template()
+     * @return array
      */
     public function portfolioAction()
     {
@@ -33,6 +38,9 @@ class DefaultController extends Controller
     }
 
     /**
+     * @param string $slug Project slug
+     *
+     * @return Response $response
      * @Route("/project/{slug}.html", name="project_show")
      * @Template()
      */
@@ -51,6 +59,7 @@ class DefaultController extends Controller
     /**
      * @Route("/contact.html", name="contact")
      * @Template()
+     * @return array
      */
     public function contactFormAction()
     {
