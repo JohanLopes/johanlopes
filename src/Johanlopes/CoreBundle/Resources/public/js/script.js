@@ -235,7 +235,7 @@ $('.flexslider').flexslider({
 $(".icon-twitter-bird-footer").tweet({
 	join_text: false,
 	username: "johan_lopes", // Change username here
-	modpath: '/bundles/johanlopescore/twitter/index.php',
+	modpath: '/bundles/johanlopescore/twitter/ezTweet.php',
 	avatar_size: false,
 	count: 1,
 	auto_join_text_default: ' we said, ',

@@ -33,7 +33,6 @@ class Contact
      */
     private $message;
 
-
     /**
      * Set name
      *

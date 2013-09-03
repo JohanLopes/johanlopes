@@ -41,8 +41,7 @@ class DefaultController extends Controller
         $project = $this->getDoctrine()->getRepository('JohanlopesCoreBundle:Project')->findOneBySlug($slug);
         $response = array('project' => $project);
 
-        if($this->getRequest()->isXmlHttpRequest())
-        {
+        if ($this->getRequest()->isXmlHttpRequest()) {
             return $this->render('JohanlopesCoreBundle:Default:project.html.twig', $response);
         }
 

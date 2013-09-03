@@ -29,8 +29,7 @@ class ProjectRepository extends EntityRepository
     {
         $position = $object->getRank();
 
-        if ($position < $this->getFinalPosition())
-        {
+        if ($position < $this->getFinalPosition()) {
             $object->setRank($position + 1);
             $this->_em->persist($object);
             $this->_em->flush();
@@ -46,8 +45,7 @@ class ProjectRepository extends EntityRepository
     {
         $position = $object->getRank();
 
-        if ($position > 1)
-        {
+        if ($position > 1) {
             $object->setRank($position - 1);
             $this->_em->persist($object);
             $this->_em->flush();
@@ -65,6 +63,6 @@ class ProjectRepository extends EntityRepository
         $last = $q->getQuery()->getSingleResult();
         $finalPosition = $last ? $last['rank'] : 1;
 
-        return (int)$finalPosition;
+        return (int) $finalPosition;
     }
 }
