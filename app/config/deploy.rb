@@ -3,8 +3,7 @@
 #############################################################
 
 set :application,       "johanlopes"
-set :domain,            "uranus.creative-nao.fr"
-set :user,              "jlopes"
+set :domain,            "uranus"
 set :app_path,          "app"
 set :app_web,           "web"
 set :deploy_to,         "/home/#{application}.fr"
