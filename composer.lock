@@ -3,21 +3,21 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "aace5bec80e19acb4bd8598a8819aa2a",
+    "hash": "2be6c77f0d40f060d52f91b281e425bc",
     "packages": [
         {
             "name": "avalanche123/imagine-bundle",
-            "version": "dev-master",
+            "version": "v2.1.2",
             "target-dir": "Avalanche/Bundle/ImagineBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/avalanche123/AvalancheImagineBundle.git",
-                "reference": "889c6755046ea2c5448b137d337087cc31978b80"
+                "reference": "e53bc4a5295d7248c5392b4d40e2c517e3cfd922"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/avalanche123/AvalancheImagineBundle/zipball/889c6755046ea2c5448b137d337087cc31978b80",
-                "reference": "889c6755046ea2c5448b137d337087cc31978b80",
+                "url": "https://api.github.com/repos/avalanche123/AvalancheImagineBundle/zipball/e53bc4a5295d7248c5392b4d40e2c517e3cfd922",
+                "reference": "e53bc4a5295d7248c5392b4d40e2c517e3cfd922",
                 "shasum": ""
             },
             "require": {
@@ -53,7 +53,7 @@
                 "image manipulation",
                 "imagine"
             ],
-            "time": "2013-08-29 02:05:49"
+            "time": "2012-12-13 18:34:10"
         },
         {
             "name": "doctrine/common",
@@ -1507,7 +1507,6 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "stof/doctrine-extensions-bundle": 20,
-        "avalanche123/imagine-bundle": 20,
         "guzzle/guzzle": 20
     },
     "platform": {

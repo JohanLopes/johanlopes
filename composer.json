@@ -20,9 +20,9 @@
         "sensio/generator-bundle": "2.3.*",
         "incenteev/composer-parameter-handler": "~2.0",
 
-        "stof/doctrine-extensions-bundle": "dev-master",
-        "avalanche123/imagine-bundle": "dev-master",
-        "guzzle/guzzle":"dev-master"
+        "stof/doctrine-extensions-bundle": "1.1.*@dev",
+        "avalanche123/imagine-bundle": "v2.1.2",
+        "guzzle/guzzle": "3.7.*@dev"
     },
     "repositories": [
        {

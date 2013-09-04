@@ -4,17 +4,31 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
-    <!--
     <parameters>
-        <parameter key="johanlopes_core.example.class">Johanlopes\CoreBundle\Example</parameter>
+        <parameter key="class.guzzle.response">Guzzle\Http\Message\Response</parameter>
     </parameters>
 
     <services>
-        <service id="johanlopes_core.example" class="%johanlopes_core.example.class%">
-            <argument type="service" id="service_id" />
-            <argument>plain_value</argument>
-            <argument>%parameter_name%</argument>
+        <service id="twig.extension.text" class="Twig_Extensions_Extension_Text">
+            <tag name="twig.extension" />
         </service>
+
+        <service id="guzzle.twitter.client" class="Guzzle\Http\Client">
+            <argument>https://api.twitter.com/1.1</argument>
+            <call method="addSubscriber">
+                <argument type="service" id="guzzle.twitter.oauthplugin" />
+            </call>
+        </service>
+
+        <service id="guzzle.twitter.oauthplugin" class="Guzzle\Plugin\Oauth\OauthPlugin">
+            <argument type="collection">
+                <argument type="string"  key="consumer_key">%twitter_consumer_key%</argument>
+                <argument type="string"  key="consumer_secret">%twitter_consumer_secret%</argument>
+                <argument type="string"  key="token">%twitter_token%</argument>
+                <argument type="string"  key="token_secret">%twitter_token_secret%</argument>
+            </argument>
+        </service>
+
     </services>
-    -->
+
 </container>

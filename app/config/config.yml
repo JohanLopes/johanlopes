@@ -1,7 +1,6 @@
 imports:
     - { resource: parameters.yml }
-    - { resource: security.yml }
-    - { resource: twitter.yml }
+#    - { resource: security.yml }
 
 framework:
     #esi:             ~
@@ -18,7 +17,8 @@ framework:
         #assets_version: SomeVersionScheme
     default_locale:  "%locale%"
     trusted_proxies: ~
-    session:         ~
+    session:
+        name: johanlopes_cookie
     fragments:       ~
     http_method_override: true
 
@@ -89,10 +89,3 @@ avalanche_imagine:
         project_456:
             type:               thumbnail
             options:            { size: [456, 285], mode: outbound }
-
-# Twig extensions
-services:
-    twig.extension.text:
-        class: Twig_Extensions_Extension_Text
-        tags:
-            - { name: twig.extension }

@@ -32,6 +32,19 @@ class DefaultController extends Controller
             return $response;
         }
 
+        $twitter = $this->getTweeterFeed();
+        $response->setContent($this->renderView('JohanlopesCoreBundle:Default:index.html.twig',array('twitter' => $twitter)));
+
+        return $response;
+    }
+
+    /**
+     * getTweeterFeed
+     *
+     * @return array $twitter
+     */
+    protected function getTweeterFeed()
+    {
         try {
             $twitterClient   = $this->container->get('guzzle.twitter.client');
             $twitterResponse = $twitterClient->get('statuses/user_timeline.json?screen_name=johan_lopes&count=1')->send()->json();
@@ -45,9 +58,7 @@ class DefaultController extends Controller
             $twitter = null;
         }
 
-        $response->setContent($this->renderView('JohanlopesCoreBundle:Default:index.html.twig',array('twitter' => $twitter)));
-
-        return $response;
+        return $twitter;
     }
 
     /**
@@ -91,30 +102,42 @@ class DefaultController extends Controller
      */
     public function contactFormAction()
     {
-        $sent = "";
-
+        $sent = false;
         $form = $this->createForm(new ContactType());
 
         if ($this->getRequest()->isMethod('POST')) {
             $form->bind($this->getRequest());
 
             if ($form->isValid()) {
-                $values = $form->getData();
-
-                try {
-                    $message = \Swift_Message::newInstance()
-                        ->setSubject('[Johanlopes.fr] Nouveau message du formulaire de contact')
-                        ->setFrom($values->getEmail())
-                        ->setTo('lopes.johan@gmail.com')
-                        ->setBody($this->renderView('JohanlopesCoreBundle:Mail:contact.html.twig', array('values' => $values)), 'text/html');
-
-                    $this->get('mailer')->send($message);
-                    $sent = true;
-                } catch (\Exception $e) {
-                }
+                $sent = $this->sendContactMessage($form->getData());
             }
         }
 
         return array('form' => $form->createView(), 'sent' => $sent);
+    }
+
+    /**
+     * send Contact Message
+     *
+     * @param  array $values
+     *
+     * @return boolean
+     */
+    protected function sendContactMessage($values)
+    {
+        try {
+            $message = \Swift_Message::newInstance()
+                ->setSubject('[Johanlopes.fr] Nouveau message du formulaire de contact')
+                ->setFrom($values->getEmail())
+                ->setTo('lopes.johan@gmail.com')
+                ->setBody($this->renderView('JohanlopesCoreBundle:Mail:contact.html.twig', array('values' => $values)), 'text/html');
+
+            $this->get('mailer')->send($message);
+
+            return true;
+        } catch (\Exception $e) {
+        }
+
+        return false;
     }
 }

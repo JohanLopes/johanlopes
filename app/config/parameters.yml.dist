@@ -11,8 +11,8 @@ parameters:
     mailer_user:       ~
     mailer_password:   ~
 
-    locale:            en
-    secret:            ThisTokenIsNotSoSecretChangeIt
+    locale:            fr
+    secret:            d41d8cd98f00b204e9800998ecf8427e
 
     twitter_consumer_key:    ~
     twitter_consumer_secret: ~
