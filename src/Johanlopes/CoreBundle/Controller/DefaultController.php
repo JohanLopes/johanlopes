@@ -5,6 +5,7 @@ namespace Johanlopes\CoreBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+use Guzzle\Http\Exception\BadResponseException;
 use Johanlopes\CoreBundle\Form\ContactType;
 
 /**
@@ -19,7 +20,20 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
-        return array();
+        try {
+            $twitterClient   = $this->container->get('guzzle.twitter.client');
+            $twitterResponse = $twitterClient->get('statuses/user_timeline.json?screen_name=johan_lopes&count=1')->send()->json();
+
+            $twitterId      = isset($twitterResponse[0]['id']) ? $twitterResponse[0]['id'] : null;
+            $twitterDate    = isset($twitterResponse[0]['created_at']) ? $twitterResponse[0]['created_at'] : null;
+            $twitterMessage = isset($twitterResponse[0]['text']) ? $twitterResponse[0]['text'] : null;
+
+            $twitter = array('id' => $twitterId, 'date' => $twitterDate, 'message' => $twitterMessage);
+        } catch (BadResponseException $e) {
+            $twitter = null;
+        }
+
+        return array('twitter' => $twitter);
     }
 
     /**

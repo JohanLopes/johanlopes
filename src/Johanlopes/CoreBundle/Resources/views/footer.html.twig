@@ -6,7 +6,16 @@
         <div class="arrowFeed"></div>
         <!--Inner twitter-->
         <div id="innerTwitter">
-            <div class="icon-twitter-bird-footer"></div>
+            <div class="icon-twitter-bird-footer">
+                {% if twitter %}
+                    <ul class="tweet_list">
+                        <li class="tweet_first tweet_odd">
+                            <span class="tweet-date">Le {{ twitter.date | date('d/m/Y \\à H\\hi') }}</span>
+                            <a href="http://twitter.com/johan_lopes/status/{{ twitter.id }}" class="tweet">{{ twitter.message }}</a></span>
+                        </li>
+                    </ul>
+                {% endif %}
+            </div>
         </div>
         <!--End inner twitter-->
     </div>

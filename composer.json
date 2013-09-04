@@ -21,8 +21,26 @@
         "incenteev/composer-parameter-handler": "~2.0",
 
         "stof/doctrine-extensions-bundle": "dev-master",
-        "avalanche123/imagine-bundle": "dev-master"
+        "avalanche123/imagine-bundle": "dev-master",
+        "guzzle/guzzle":"dev-master"
     },
+    "repositories": [
+       {
+            "type": "package",
+            "package": {
+                "name": "abraham/twitteroauth",
+                "version": "master",
+                "source": {
+                    "url": "http://github.com/abraham/twitteroauth",
+                    "type": "git",
+                    "reference": "master"
+                },
+                "autoload": {
+                    "classmap": ["twitteroauth/"]
+                }
+            }
+        }
+    ],
     "scripts": {
         "post-install-cmd": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",

@@ -998,8 +998,6 @@ form{
 
 
 #innerTwitter .icon-twitter-bird-footer {
-
-    padding-top: 25px;
 	padding-left:40px;
 	padding-right:40px;
 }
@@ -1008,7 +1006,7 @@ form{
 	    color: #04C3A5;
 	    font-size: 30px;
 	    position: relative;
-	    top: 179px;
+	    top: 105px;
 		height: 10px;
 		left:443px;
 		transform: rotate(45deg);

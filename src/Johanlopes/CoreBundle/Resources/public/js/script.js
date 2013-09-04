@@ -231,22 +231,6 @@ $('.flexslider').flexslider({
 });
 //------------------------------------------------- End flex slider --------------------------------------------------//
 
-//-------------------------------------------------Tweets --------------------------------------------------//
-$(".icon-twitter-bird-footer").tweet({
-	join_text: false,
-	username: "johan_lopes", // Change username here
-	modpath: '/bundles/johanlopescore/twitter/ezTweet.php',
-	avatar_size: false,
-	count: 1,
-	auto_join_text_default: ' we said, ',
-	auto_join_text_ed: ' we ',
-	auto_join_text_ing: ' we were ',
-	auto_join_text_reply: ' we replied to ',
-	auto_join_text_url: ' we were checking out ',
-	loading_text: 'Chargement des tweets...'
-});
-//------------------------------------------------- End Tweets --------------------------------------------------//
-
 });
 
 
