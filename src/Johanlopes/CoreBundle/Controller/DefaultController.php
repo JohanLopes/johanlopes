@@ -6,6 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Guzzle\Http\Exception\BadResponseException;
+use Symfony\Component\HttpFoundation\Response;
 use Johanlopes\CoreBundle\Form\ContactType;
 
 /**
@@ -20,6 +21,17 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
+        $response = new Response();
+        $response->setPublic();
+        $response->setPrivate();
+        $response->setMaxAge(600);
+        $response->setSharedMaxAge(600);
+        $response->headers->addCacheControlDirective('must-revalidate', true);
+
+        if ($response->isNotModified($this->getRequest())) {
+            return $response;
+        }
+
         try {
             $twitterClient   = $this->container->get('guzzle.twitter.client');
             $twitterResponse = $twitterClient->get('statuses/user_timeline.json?screen_name=johan_lopes&count=1')->send()->json();
@@ -33,7 +45,9 @@ class DefaultController extends Controller
             $twitter = null;
         }
 
-        return array('twitter' => $twitter);
+        $response->setContent($this->renderView('JohanlopesCoreBundle:Default:index.html.twig',array('twitter' => $twitter)));
+
+        return $response;
     }
 
     /**
