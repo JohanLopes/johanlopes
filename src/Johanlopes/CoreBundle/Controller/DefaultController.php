@@ -8,6 +8,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Guzzle\Http\Exception\BadResponseException;
 use Symfony\Component\HttpFoundation\Response;
 use Johanlopes\CoreBundle\Form\ContactType;
+use Johanlopes\CoreBundle\Entity\Contact;
 
 /**
  * Default controller
@@ -123,7 +124,7 @@ class DefaultController extends Controller
      *
      * @return boolean
      */
-    protected function sendContactMessage($values)
+    protected function sendContactMessage(Contact $values)
     {
         try {
             $message = \Swift_Message::newInstance()
