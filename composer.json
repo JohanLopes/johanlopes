@@ -22,7 +22,8 @@
 
         "stof/doctrine-extensions-bundle": "1.1.*@dev",
         "avalanche123/imagine-bundle": "v2.1.2",
-        "guzzle/guzzle": "3.7.*@dev"
+        "guzzle/guzzle": "3.7.*@dev",
+        "gregwar/captcha-bundle": "dev-master"
     },
     "repositories": [
        {

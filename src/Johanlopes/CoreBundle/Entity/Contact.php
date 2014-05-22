@@ -23,11 +23,6 @@ class Contact
     private $email;
 
     /**
-     * @var string $company
-     */
-    private $company;
-
-    /**
      * @var text $message
      * @Assert\NotBlank(message="Vous devez renseigner votre message")
      */
@@ -71,26 +66,6 @@ class Contact
     public function getEmail()
     {
         return $this->email;
-    }
-
-    /**
-     * Set company
-     *
-     * @param string $company
-     */
-    public function setCompany($company)
-    {
-        $this->company = $company;
-    }
-
-    /**
-     * Get company
-     *
-     * @return string
-     */
-    public function getCompany()
-    {
-        return $this->company;
     }
 
     /**

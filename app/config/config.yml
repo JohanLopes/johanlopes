@@ -89,3 +89,9 @@ avalanche_imagine:
         project_456:
             type:               thumbnail
             options:            { size: [456, 285], mode: outbound }
+
+gregwar_captcha:
+    height: 45
+    quality: 100
+    background_color: [4,195,165]     #04c3a5
+    distortion: false

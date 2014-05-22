@@ -19,6 +19,7 @@ class AppKernel extends Kernel
 
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
             new Avalanche\Bundle\ImagineBundle\AvalancheImagineBundle(),
+            new Gregwar\CaptchaBundle\GregwarCaptchaBundle(),
 
             new Johanlopes\CoreBundle\JohanlopesCoreBundle(),
         );

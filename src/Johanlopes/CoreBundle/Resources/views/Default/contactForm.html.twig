@@ -17,11 +17,11 @@
     {{ form_widget(form.email, {'attr': {'placeholder': 'E-mail *'}}) }}
     {{ form_errors(form.email) }}
 
-    {{ form_widget(form.company, {'attr': {'placeholder': 'Société'}}) }}
-    {{ form_errors(form.company) }}
-
-    {{ form_widget(form.message, {'attr': {'placeholder': 'Message *', 'cols': '45', 'rows': '10'}}) }}
+    {{ form_widget(form.message, {'attr': {'placeholder': 'Message *', 'rows': '10'}}) }}
     {{ form_errors(form.message) }}
+
+    {{ form_widget(form.captcha, {'attr': {'placeholder': 'Recopiez le code de sécurité ci-contre *', 'style': 'float: right; width: 300px;'}}) }}
+    {{ form_errors(form.captcha) }}
 
     {{ form_rest(form) }}
     <input type="submit" name="submit" id="submit" value="Envoyer votre message">
