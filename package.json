@@ -1,0 +1,28 @@
+{
+  "name": "johanlopes",
+  "author": {
+    "name": "JohanLopes",
+    "email": "lopes.johan@gmail.com"
+  },
+  "private": true,
+  "napa": {},
+  "dependencies": {
+    "jquery": "2.1.4",
+    "fancybox": "3.0.*",
+    "jcslider": "1.2.*",
+    "waypoints": "4.0.*"
+  },
+  "devDependencies": {
+    "gulp": "3.9.*",
+    "del": "1.2.*",
+    "elao-assets-gulp": "0.3.*",
+    "browserify-shim": "3.8.*"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+  }
+}

@@ -9,18 +9,24 @@
     </parameters>
 
     <services>
-        <service id="twig.extension.text" class="Twig_Extensions_Extension_Text">
-            <tag name="twig.extension" />
+        <service id="guzzle.twitter.client" class="GuzzleHttp\Client">
+            <argument type="collection">
+                <argument type="string"  key="base_uri">https://api.twitter.com/1.1/</argument>
+                <argument type="service" key="handler" id="guzzle.twitter.stack" />
+                <argument type="string"  key="auth">oauth</argument>
+            </argument>
+            <argument>https://api.twitter.com/1.1</argument>
+
         </service>
 
-        <service id="guzzle.twitter.client" class="Guzzle\Http\Client">
-            <argument>https://api.twitter.com/1.1</argument>
-            <call method="addSubscriber">
-                <argument type="service" id="guzzle.twitter.oauthplugin" />
+        <service id="guzzle.twitter.stack" class="GuzzleHttp\HandlerStack">
+            <factory class="GuzzleHttp\HandlerStack" method="create" />
+            <call method="push">
+                <argument type="service" id="guzzle.twitter.oauth" />
             </call>
         </service>
 
-        <service id="guzzle.twitter.oauthplugin" class="Guzzle\Plugin\Oauth\OauthPlugin">
+        <service id="guzzle.twitter.oauth" class="GuzzleHttp\Subscriber\Oauth\Oauth1">
             <argument type="collection">
                 <argument type="string"  key="consumer_key">%twitter_consumer_key%</argument>
                 <argument type="string"  key="consumer_secret">%twitter_consumer_secret%</argument>

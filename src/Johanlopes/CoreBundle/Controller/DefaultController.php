@@ -2,10 +2,11 @@
 
 namespace Johanlopes\CoreBundle\Controller;
 
+use GuzzleHttp\Exception\BadResponseException;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
-use Guzzle\Http\Exception\BadResponseException;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Johanlopes\CoreBundle\Form\ContactType;
 use Johanlopes\CoreBundle\Entity\Contact;
@@ -20,7 +21,7 @@ class DefaultController extends Controller
      * @Template()
      * @return array
      */
-    public function indexAction()
+    public function indexAction(Request $request)
     {
         $response = new Response();
         $response->setPublic();
@@ -29,7 +30,7 @@ class DefaultController extends Controller
         $response->setSharedMaxAge(600);
         $response->headers->addCacheControlDirective('must-revalidate', true);
 
-        if ($response->isNotModified($this->getRequest())) {
+        if ($response->isNotModified($request)) {
             return $response;
         }
 
@@ -48,7 +49,8 @@ class DefaultController extends Controller
     {
         try {
             $twitterClient   = $this->container->get('guzzle.twitter.client');
-            $twitterResponse = $twitterClient->get('statuses/user_timeline.json?screen_name=johan_lopes&count=1')->send()->json();
+            $twitterResponse = $twitterClient->get('statuses/user_timeline.json?screen_name=johan_lopes&count=1')->getBody()->getContents();
+            $twitterResponse = json_decode($twitterResponse, true);
 
             $twitterId      = isset($twitterResponse[0]['id']) ? $twitterResponse[0]['id'] : null;
             $twitterDate    = isset($twitterResponse[0]['created_at']) ? $twitterResponse[0]['created_at'] : null;
@@ -84,12 +86,12 @@ class DefaultController extends Controller
      * @Route("/project/{slug}.html", name="project_show")
      * @Template()
      */
-    public function projectAction($slug)
+    public function projectAction(Request $request, $slug)
     {
         $project = $this->getDoctrine()->getRepository('JohanlopesCoreBundle:Project')->findOneBySlug($slug);
         $response = array('project' => $project);
 
-        if ($this->getRequest()->isXmlHttpRequest()) {
+        if ($request->isXmlHttpRequest()) {
             return $this->render('JohanlopesCoreBundle:Default:project.html.twig', $response);
         }
 
@@ -101,17 +103,14 @@ class DefaultController extends Controller
      * @Template()
      * @return array
      */
-    public function contactFormAction()
+    public function contactFormAction(Request $request)
     {
         $sent = false;
-        $form = $this->createForm(new ContactType());
+        $form = $this->createForm(ContactType::class);
+        $form->handleRequest($request);
 
-        if ($this->getRequest()->isMethod('POST')) {
-            $form->bind($this->getRequest());
-
-            if ($form->isValid()) {
-                $sent = $this->sendContactMessage($form->getData());
-            }
+        if ($form->isSubmitted() && $form->isValid()) {
+            $sent = $this->sendContactMessage($form->getData());
         }
 
         return array('form' => $form->createView(), 'sent' => $sent);

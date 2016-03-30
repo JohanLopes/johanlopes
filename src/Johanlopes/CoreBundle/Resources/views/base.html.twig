@@ -4,29 +4,17 @@
         <meta name="google-site-verification" content="RB-qk2SStZT-7wa6QJCfZK1KiqOD20ihyfKlLuwJdTI" />
         <meta name="y_key" content="e0a60d55a1083b73" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="description" content="Portfolio de Johan LOPES, Chef de projet web, Développeur web, Expert Symfony / Doctrine et auto entrepreneur à Lyon. Consultez mes réalisations, mes compétences, mon cv..." />
-        <meta name="keywords" content="johan, lopes, développeur, web, portfolio, freelance, auto entrepreneur, lyon, symfony, doctrine, php, mysql, jquery, site, internet, creative nao, réalisation, compétence, cv, iphone, ipad, apple, javascript, ajax, css, xhtml, w3c, design, intégration, ergonomie, accessibilité, rhone-alpes, rhone alpes, rhone, isère, ain, ardeche, drome" />
+        <meta name="description" content="Johan LOPES, Chef de projet web, Développeur web, Expert Symfony2 à Lyon. Consultez mes réalisations, mes compétences, mon cv..." />
+        <meta name="keywords" content="johan, lopes, symfony2, développeur, entrepreneuriat, web, portfolio, freelance, auto entrepreneur, lyon, Rhône Alpes, symfony, doctrine, php, mysql, jquery, site, internet, réalisation, compétence, cv, iphone, ipad, apple, javascript, ajax, css, xhtml, w3c, design, intégration, ergonomie, accessibilité, isère, ain, ardeche, drome" />
         <meta name="language" content="fr" />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Johan LOPES" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-        <title>{% block title %}Johan LOPES - Chef de projet Web - Expert Symfony - Lyon{% endblock %}</title>
+        <title>{% block title %}Johan LOPES - Chef de projet Web - Expert Symfony2 - Lyon{% endblock %}</title>
 
         {% block stylesheets %}
-            {% stylesheets
-                '@JohanlopesCoreBundle/Resources/public/css/main.css'
-                '@JohanlopesCoreBundle/Resources/public/fancybox/jquery.fancybox-1.3.4.css'
-                '@JohanlopesCoreBundle/Resources/public/css/flexslider.css'
-                '@JohanlopesCoreBundle/Resources/public/css/fontello.css'
-                output='css/main.css'
-                filter='yui_css' %}
-                <link rel="stylesheet" href="{{ asset_url }}" type="text/css" media="all" />
-            {% endstylesheets %}
-
-            <!--[if IE 7]>
-                <link rel="stylesheet" href="{{ asset('bundles/johanlopescore/css/fontello-ie7.css') }}">
-            <![endif]-->
+            <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}" type="text/css" media="all" />
             <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,300,800,700,400italic|PT+Serif:400,400italic"/>
 
             <!--[if lt IE 9]>
@@ -67,26 +55,7 @@
 
         <!--Javascript-->
         {% block javascripts %}
-            <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-
-            {% javascripts
-                '@JohanlopesCoreBundle/Resources/public/js/jquery-1.9.1.min.js'
-                '@JohanlopesCoreBundle/Resources/public/js/jquery-migrate-1.2.1.js'
-                '@JohanlopesCoreBundle/Resources/public/js/jquery.quicksand.js'
-                '@JohanlopesCoreBundle/Resources/public/js/jquery.easing.1.3.js'
-                '@JohanlopesCoreBundle/Resources/public/js/jquery.flexslider.js'
-                '@JohanlopesCoreBundle/Resources/public/js/jquery.fancybox-1.3.4.js'
-                '@JohanlopesCoreBundle/Resources/public/js/jquery.mousewheel-3.0.4.pack.js'
-                '@JohanlopesCoreBundle/Resources/public/js/slides.min.jquery.js'
-                '@JohanlopesCoreBundle/Resources/public/js/jquery.scrollTo-min.js'
-                '@JohanlopesCoreBundle/Resources/public/js/waypoints.js'
-                '@JohanlopesCoreBundle/Resources/public/js/jquery.tweet.js'
-                '@JohanlopesCoreBundle/Resources/public/js/jquery.gmap.min.js'
-                '@JohanlopesCoreBundle/Resources/public/js/script.js'
-                output='js/main.js'
-                filter='yui_js' %}
-                <script type="text/javascript" src="{{ asset_url }}"></script>
-            {% endjavascripts %}
+            <script type="text/javascript" src="{{ asset('assets/js/script.js') }}"></script>
 
             <!-- Google analytics -->
             <script type="text/javascript">
