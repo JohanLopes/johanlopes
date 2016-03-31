@@ -3,10 +3,9 @@
 {% if sent %}
     <div id="success">
         <h2>Votre demande a bien été envoyée, <br />vous recevrez une réponse dans quelques jours</h2>
-        <p>Je vous remercie de l'interêt que vous portez à mon profil, <br />n'hésitez pas à me contacter aussi via les réseaux sociaux professionnels : <br /></p>
+        <p>Je vous remercie de l'interêt que vous portez à mon profil, <br />n'hésitez pas à me contacter aussi via mon profil LinkedIn : <br /></p>
         <ul>
-            <li><i class="icon-viadeo"></i> Viadeo : <a href="http://fr.viadeo.com/fr/profile/johan.lopes1" target="_blank" title="Viadeo">http://fr.viadeo.com/fr/profile/johan.lopes1</a></li>
-            <li><i class="icon-linkedin-1"></i> LinkedIn : <a href="http://fr.linkedin.com/in/lopesjohan" target="_blank" title="LinkedIn">http://fr.linkedin.com/in/lopesjohan</a></li>
+            <li><i class="icon-linkedin-1"></i> <a href="http://fr.linkedin.com/in/lopesjohan" target="_blank" title="LinkedIn">http://fr.linkedin.com/in/lopesjohan</a></li>
         </ul>
         <h3>Merci !</h3>
     </div>
@@ -17,7 +16,7 @@
     {{ form_widget(form.email, {'attr': {'placeholder': 'E-mail *'}}) }}
     {{ form_errors(form.email) }}
 
-    {{ form_widget(form.message, {'attr': {'placeholder': 'Message *', 'rows': '10'}}) }}
+    {{ form_widget(form.message, {'attr': {'placeholder': 'Message *'}}) }}
     {{ form_errors(form.message) }}
 
     {{ form_widget(form.captcha, {'attr': {'placeholder': 'Recopiez le code de sécurité ci-contre *', 'style': 'float: right; width: 300px;'}}) }}

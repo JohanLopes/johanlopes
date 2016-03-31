@@ -1,11 +1,9 @@
-var $           = require('jquery'),
-    //fancybox    = require('fancybox'),
-    jcSlider    = require('jcslider')
-;
+var $ = window.jQuery = require('jquery');
+require('bxslider');
+require('fancybox')($);
 //require('waypoints');
 
-
-jQuery(document).ready(function(){
+$(document).ready(function($){
 
     //------------------------------------- Navigation setup ------------------------------------------------//
 
@@ -29,7 +27,7 @@ jQuery(document).ready(function(){
     var sections = $("section");
         var navigation_links = $("#mainNav a");
 
-        sections.waypoint({
+        /*sections.waypoint({
             handler: function(event, direction) {
 
                 var active_section;
@@ -45,8 +43,7 @@ jQuery(document).ready(function(){
 
             },
             offset: '35%'
-        });
-
+        });*/
 
     //------------------------------------- End navigation setup ------------------------------------------------//
 
@@ -205,11 +202,8 @@ jQuery(document).ready(function(){
           marker = new google.maps.Marker({
             position: myLatlng,
             map: map,
-            icon: "/bundles/johanlopescore/images/marker.png"
+            icon: "/assets/images/marker.png"
           });
-
-
-
 
           //Associate the styled map with the MapTypeId and set it to display.
           map.mapTypes.set('map_style', customMap);
@@ -218,11 +212,12 @@ jQuery(document).ready(function(){
     //---------------------------------- End google map location -----------------------------------------//
 
     //-------------------------------------------------Flex slider --------------------------------------------------//
-    /*$('.jc-slider').jcSlider({
-        animationIn     : "fadeIn",
-        animationOut    : "fadeOut",
-        stopOnHover     : false, // true by default
-    });*/
+    $('.bxslider').bxSlider({
+        pager: false,
+        controls: false,
+        auto: true,
+        randomStart: true,
+    });
     //------------------------------------------------- End flex slider --------------------------------------------------//
 
 });

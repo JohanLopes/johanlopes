@@ -9,7 +9,7 @@
   "dependencies": {
     "jquery": "2.1.4",
     "fancybox": "3.0.*",
-    "jcslider": "1.2.*",
+    "bxslider": "4.2.*",
     "waypoints": "4.0.*"
   },
   "devDependencies": {
