@@ -25,6 +25,12 @@ assets.config({
             groups: {
                 'librairies': {src: 'jquery-modal/jquery.modal.css'}
             }
+        },
+        files: {
+            glob:      '**',
+            src:       'files',
+            dest:      'files',
+            groups:    {}
         }
     }
 });
