@@ -26,6 +26,11 @@ assets.config({
                 'elaostrap': {src: 'elaostrap/assets/fonts/**'},
                 'bootstrap': {src: 'bootstrap-sass/assets/fonts/**'}
             }
+        },
+        css: {
+            groups: {
+                'librairies': {src: 'jquery-modal/jquery.modal.css'}
+            }
         }
     }
 });

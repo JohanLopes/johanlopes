@@ -1,6 +1,6 @@
 var $ = window.jQuery = require('jquery');
 require('bxslider');
-require('fancybox')($);
+require('jquery-modal');
 //require('waypoints');
 
 $(document).ready(function($){
@@ -66,13 +66,13 @@ $(document).ready(function($){
 
     //-----------------------------------Initilaizing fancybox for the portfolio-------------------------------------------------//
 
-        $('.portfolio a.folio, .columns_Three a, .blogPost a ').fancybox({
+        /*$('.portfolio a.folio, .columns_Three a, .blogPost a ').fancybox({
             'overlayShow'   : true,
             'opacity'       : true,
             'transitionIn'  : 'fade',
             'transitionOut' : 'none',
             'overlayOpacity'    :   0.8
-        });
+        });*/
 
     //-----------------------------------End initilaizing fancybox for the portfolio-------------------------------------------------//
 
@@ -103,13 +103,13 @@ $(document).ready(function($){
 
     //------------------------------ Reinitilaizing fancybox for the new cloned elements of the portfolio----------------------------//
 
-                $('.portfolio a.folio').fancybox({
+                /*$('.portfolio a.folio').fancybox({
                     'overlayShow'   : true,
                     'opacity'       : true,
                     'transitionIn'  : 'elastic',
                     'transitionOut' : 'none',
                     'overlayOpacity'    :   0.8
-                });
+                });*/
 
     //-------------------------- End reinitilaizing fancybox for the new cloned elements of the portfolio ----------------------------//
 

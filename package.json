@@ -8,7 +8,7 @@
   "napa": {},
   "dependencies": {
     "jquery": "2.1.4",
-    "fancybox": "3.0.*",
+    "jquery-modal": "0.7.*",
     "bxslider": "4.2.*",
     "waypoints": "4.0.*"
   },
