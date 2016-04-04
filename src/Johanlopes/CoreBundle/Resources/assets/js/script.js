@@ -144,70 +144,51 @@ $(document).ready(function($){
 
     //---------------------------------- Google map location -----------------------------------------//
 
+    var center = {lat: 45.698938, lng: 4.947071};
 
+    var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 9,
+        center: center,
+        scrollwheel: false,
+        streetViewControl: false,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        mapTypeControl: false
+    });
 
-    /*
-        var pointer = {
-                path: google.maps.SymbolPath.CIRCLE,
-                fillOpacity: 1,
-                fillColor: '#04C3A5',
-                strokeOpacity: 0,
-                scale: 10
-        };*/
-
-    // Create an array of styles.
     var styles = [
-            {
-                stylers: [
-                    { saturation: -200 }
+        {
+            stylers: [
+                { saturation: -200 }
 
-                ]
-            },{
-                featureType: 'road',
-                elementType: 'geometry',
-                stylers: [
-                    { hue: "#cccccc" },
-                    { visibility: 'simplified' }
-                ]
-            },{
-                featureType: 'road',
-                elementType: 'labels',
-                stylers: [
-                    { visibility: 'off' }
-                ]
-            }
-          ],
+            ]
+        },{
+            featureType: 'road',
+            elementType: 'geometry',
+            stylers: [
+                { hue: "#cccccc" },
+                { visibility: 'simplified' }
+            ]
+        },{
+            featureType: 'road',
+            elementType: 'labels',
+            stylers: [
+                { visibility: 'off' }
+            ]
+        }
+    ];
 
-            // Lagitute and longitude for your location goes here
-           lat = 45.632417,
-           lng = 5.148123,
+    var customMap = new google.maps.StyledMapType(styles, {name: 'Styled Map'});
+    map.mapTypes.set('map_style', customMap);
+    map.setMapTypeId('map_style');
 
-          // Create a new StyledMapType object, passing it the array of styles,
-          // as well as the name to be displayed on the map type control.
-          customMap = new google.maps.StyledMapType(styles,
-              {name: 'Styled Map'}),
-
-        // Create a map object, and include the MapTypeId to add
-        // to the map type control.
-          mapOptions = {
-              zoom: 10,
-              center: new google.maps.LatLng(45.698938,4.947071),
-              mapTypeControlOptions: {
-                  mapTypeIds: [google.maps.MapTypeId.ROADMAP]
-              }
-          },
-          map = new google.maps.Map(document.getElementById('map'), mapOptions),
-          myLatlng = new google.maps.LatLng( lat, lng ),
-
-          marker = new google.maps.Marker({
-            position: myLatlng,
-            map: map,
-            icon: "/assets/images/marker.png"
-          });
-
-          //Associate the styled map with the MapTypeId and set it to display.
-          map.mapTypes.set('map_style', customMap);
-          map.setMapTypeId('map_style');
+    var circleArea = new google.maps.Circle({
+        fillOpacity: 0.4,
+        fillColor: '#04C3A5',
+        strokeOpacity: 0,
+        map: map,
+        center: center,
+        radius: 20000
+    });
 
     //---------------------------------- End google map location -----------------------------------------//
 
