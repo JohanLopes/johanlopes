@@ -10,19 +10,6 @@
     </div>
     <!--End title-->
 
-    <!--Filter nav holder-->
-    <div id="filternavHolder">
-        <!-- Filter nav -->
-        <ul id="category" class="filter">
-            <li class="all current"><a href="#">Tous</a></li>
-            {% for category in categories %}
-                <li class="{{ category.slug }}"><a href="#">{{ category.name }}</a></li>
-            {% endfor %}
-        </ul>
-        <!-- End filter nav -->
-    </div>
-    <!--End filter nav holder-->
-
     <!--Inner portfolio-->
     <div id="innerPortfolio" class="clearfix">
 
@@ -31,8 +18,8 @@
             <!--Portfolio-->
             <ul class="portfolio clearfix">
                 {% for project in projects %}
-                    <li data-id="id-{{ project.slug }}" data-type="{% for category in project.categories %}{{ category.slug }} {% endfor %}" class="item">
-                        <img src="{{ project.getWebPath() | imagine_filter('project_268') }}" alt="{{ project.name }}" />
+                    <li class="item">
+                        <img src="{{ project.image | imagine_filter('project_268') }}" alt="{{ project.name }}" />
                         <a href="{{ path('project_show', { 'slug': project.slug }) }}" class="icon" rel="modal:open">+</a>
                         <div class="hgroup">
                             <h3>{{ project.name }}</h3>

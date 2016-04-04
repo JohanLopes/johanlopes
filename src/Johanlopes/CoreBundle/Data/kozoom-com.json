@@ -1,0 +1,9 @@
+{
+  "name": "Kozoom.com",
+  "resume": "<p><strong>Kozoom.com</strong> est un leader dans le monde du billard. Vous pouvez d&eacute;couvrir &agrave; travers ce site internet remis compl&egrave;tement &agrave; neuf de nombreuses informations concernant le billard. En effet, vous avez la possibilit&eacute; de consulter les <strong>r&eacute;sultats</strong> (classements et matchs) des comp&eacute;titions <strong>nationales et internationales</strong>, des <strong>photos</strong>, <strong>vid&eacute;os</strong>, <strong>news</strong>, <strong>palmares</strong> des joueurs et bien d'autres choses encore. La majorit&eacute; du contenu de ce site internet est <strong>gratuite</strong> mais si toutefois vous souhaitez allez plus loin, vous pourrez vous acquitter d'un <strong>abonnement Premium</strong> qui vous permettra d'acc&eacute;der en toute libert&eacute; au <strong>LIVE</strong> des rencontres, aux <strong>vid&eacute;os</strong>, aux <strong>explications techniques</strong> des plus grands professionnels ...</p><p>Vous &ecirc;tes passion&eacute; par le billard ou bien vous souhaitez d&eacute;couvrir ce sport, alors rejoingnez vite toute l'&eacute;quipe de Kozoom sur <strong>Kozoom.com</strong></p>",
+  "technology": "Symfony 1.4, Doctrine 1.2, jQuery 1.4, JWPlayer (player flash pour les vidéos), Solr",
+  "url": "http://www.kozoom.com",
+  "image": "kozoom.png",
+  "rank": 3,
+  "slug": "kozoom-com"
+}

@@ -28,13 +28,16 @@
 
         <service id="guzzle.twitter.oauth" class="GuzzleHttp\Subscriber\Oauth\Oauth1">
             <argument type="collection">
-                <argument type="string"  key="consumer_key">%twitter_consumer_key%</argument>
-                <argument type="string"  key="consumer_secret">%twitter_consumer_secret%</argument>
-                <argument type="string"  key="token">%twitter_token%</argument>
-                <argument type="string"  key="token_secret">%twitter_token_secret%</argument>
+                <argument type="string" key="consumer_key">%twitter_consumer_key%</argument>
+                <argument type="string" key="consumer_secret">%twitter_consumer_secret%</argument>
+                <argument type="string" key="token">%twitter_token%</argument>
+                <argument type="string" key="token_secret">%twitter_token_secret%</argument>
             </argument>
         </service>
 
+        <service id="johanlopes.repository.project" class="Johanlopes\CoreBundle\Entity\ProjectRepository">
+            <argument type="string" key="dataPath">%kernel.root_dir%/../src/Johanlopes/CoreBundle/Data/</argument>
+        </service>
     </services>
 
 </container>

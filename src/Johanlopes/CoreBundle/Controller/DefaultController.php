@@ -70,11 +70,9 @@ class DefaultController extends Controller
      */
     public function portfolioAction()
     {
-        $categories = $this->getDoctrine()->getRepository('JohanlopesCoreBundle:Category')->findAllSorted();
-        $projects   = $this->getDoctrine()->getRepository('JohanlopesCoreBundle:Project')->findAllSorted();
+        $projects = $this->get('johanlopes.repository.project')->findAll();
 
         return array(
-            'categories' => $categories,
             'projects' => $projects
         );
     }
@@ -88,7 +86,7 @@ class DefaultController extends Controller
      */
     public function projectAction(Request $request, $slug)
     {
-        $project = $this->getDoctrine()->getRepository('JohanlopesCoreBundle:Project')->findOneBySlug($slug);
+        $project = $this->get('johanlopes.repository.project')->find($slug);
         $response = array('project' => $project);
 
         if ($request->isXmlHttpRequest()) {

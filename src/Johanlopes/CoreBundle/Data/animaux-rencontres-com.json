@@ -1,0 +1,9 @@
+{
+  "name": "Animaux-Rencontres.com",
+  "resume": "<p style=\"text-align: justify;\"><strong>Animaux-Rencontres.com</strong> est un site  communautaire permettant aux propri&eacute;taires d&rsquo;animaux de partager la m&ecirc;me  passion et de pouvoir partager concernant leur compagnon. Ce site est une sorte de &laquo;&nbsp;Facebook&nbsp;&raquo; pour les animaux. Il permet de  partager des <strong>photos</strong>, <strong>vid&eacute;os</strong>, des <strong>ballades</strong>, de se <strong>faire des amis</strong>&hellip;</p><p style=\"text-align: justify;\">Si vous avez un animal, inscrivez-vous vite sur Animaux-Rencontres.com</p>",
+  "technology": "#Symfony 1.2 puis migration sous Symfony 1.4, Doctrine 1.2, jQuery 1.4, jQuery UI 1.8, API FlickR",
+  "url": "http://www.animaux-rencontres.com",
+  "image": "animauxrencontres.png",
+  "rank": 9,
+  "slug": "animaux-rencontres-com"
+}

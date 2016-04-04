@@ -1,0 +1,9 @@
+{
+  "name": "Afnic",
+  "resume": null,
+  "technology": "Symfony 1.4, Doctrine",
+  "url": "http://www.afnic.fr/",
+  "image": "afnic.png",
+  "rank": 6,
+  "slug": "afnic-fr"
+}

@@ -18,11 +18,17 @@
     "elao-assets-gulp": "0.3.*",
     "browserify-shim": "3.8.*"
   },
+  "browser": {
+    "waypoints": "./node_modules/waypoints/lib/jquery.waypoints.js"
+  },
+  "browserify-shim": {
+    "waypoints": {
+      "exports": "waypoints"
+    }
+  },
   "browserify": {
     "transform": [
       "browserify-shim"
     ]
-  },
-  "browserify-shim": {
   }
 }

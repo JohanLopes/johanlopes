@@ -15,96 +15,40 @@ use Doctrine\Common\Collections\ArrayCollection;
 class Project
 {
     /**
-     * @var integer $id
-     *
-     * @ORM\Column(name="id", type="integer")
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="AUTO")
-     */
-    private $id;
-
-    /**
      * @var string $name
-     *
-     * @ORM\Column(name="name", type="string", length=120)
      */
     private $name;
 
     /**
      * @var text $resume
-     *
-     * @ORM\Column(name="resume", type="text", nullable=true)
      */
     private $resume;
 
     /**
      * @var text $technology
-     *
-     * @ORM\Column(name="technology", type="text", nullable=true)
      */
     private $technology;
 
     /**
      * @var string $url
-     *
-     * @ORM\Column(name="url", type="string", length=255)
      */
     private $url;
 
     /**
      * @var string $image
-     *
-     * @ORM\Column(name="image", type="string", length=255)
      */
     private $image;
 
     /**
      * @var integer $rank
-     * @Gedmo\SortablePosition
-     * @ORM\Column(name="rank", type="integer")
      */
     private $rank;
 
     /**
      * @var string $slug
      *
-     * @ORM\Column(name="slug", type="string", length=255, unique=true)
-     * @Gedmo\Slug(fields={"name"})
      */
     private $slug;
-
-    /**
-     * The file
-     *
-     * @var string $file
-     */
-    private $file;
-
-    /**
-     * @var ArrayCollection $categories
-     *
-     * @ORM\ManyToMany(targetEntity="Johanlopes\CoreBundle\Entity\Category", inversedBy="projects")
-     * @ORM\JoinTable(name="project_category")
-     */
-    private $categories;
-
-    /**
-     * Construct
-     */
-    public function __construct()
-    {
-        $this->categories = new ArrayCollection();
-    }
-
-    /**
-     * Get id
-     *
-     * @return integer
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
 
     /**
      * Set name
@@ -244,151 +188,5 @@ class Project
     public function getSlug()
     {
         return $this->slug;
-    }
-
-    /**
-     * Get file
-     *
-     * @return string
-     */
-    public function getFile()
-    {
-        return $this->file;
-    }
-
-    /**
-     * Set file
-     *
-     * @param string $file
-     */
-    public function setFile($file)
-    {
-        $this->file = $file;
-    }
-
-    /**
-     * Get Image absolute path
-     * @return string
-     */
-    public function getAbsolutePath()
-    {
-        return null === $this->image ? null : $this->getUploadRootDir().'/'.$this->image;
-    }
-
-    /**
-     * Get image web path
-     * @return string
-     */
-    public function getWebPath()
-    {
-        return null === $this->image ? null : '/' . $this->getUploadDir().'/'.$this->image;
-    }
-
-    /**
-     * Get image upload root dir
-     * @param string $basepath
-     *
-     * @return string
-     */
-    protected function getUploadRootDir($basepath)
-    {
-        // the absolute directory path where uploaded documents should be saved
-        return $basepath.$this->getUploadDir();
-    }
-
-    /**
-     * Get image upload dir
-     * @return string
-     */
-    protected function getUploadDir()
-    {
-        // get rid of the __DIR__ so it doesn't screw when displaying uploaded doc/image in the view.
-        return 'uploads/projects';
-    }
-
-    /**
-     * Image upload
-     * @param string $basepath
-     *
-     * @return mixed
-     */
-    public function upload($basepath)
-    {
-        // the file property can be empty if the field is not required
-        if (null === $this->file) {
-            return;
-        }
-
-        if (null === $basepath) {
-            return;
-        }
-
-        // we use the original file name here but you should
-        // sanitize it at least to avoid any security issues
-
-        // move takes the target directory and then the target filename to move to
-        $this->file->move($this->getUploadRootDir($basepath), $this->file->getClientOriginalName());
-
-        // set the path property to the filename where you'ved saved the file
-        $this->setImage($this->file->getClientOriginalName());
-
-        // clean up the file property as you won't need it anymore
-        $this->file = null;
-    }
-
-    /**
-     * Add categories
-     *
-     * @param Johanlopes\CoreBundle\Entity\Category $category
-     *
-     * @return Project
-     */
-    public function addCategory(\Johanlopes\CoreBundle\Entity\Category $category)
-    {
-        if (!$this->categories->contains($category)) {
-            $this->categories->add($category);
-        }
-
-        return $this;
-    }
-
-    /**
-     * Get categories
-     *
-     * @return Doctrine\Common\Collections\Collection
-     */
-    public function getCategories()
-    {
-        return $this->categories;
-    }
-
-    /**
-     * Set categories
-     *
-     * @param ArrayCollection $categories
-     *
-     * @return Satellite
-     */
-    public function setCategories(ArrayCollection $categories)
-    {
-        $this->clearCategories();
-
-        foreach ($categories as $category) {
-            $this->addCategory($category);
-        }
-
-        return $this;
-    }
-
-    /**
-     * Clear categories
-     *
-     * @return Satellite
-     */
-    public function clearCategories()
-    {
-        $this->categories = new ArrayCollection();
-
-        return $this;
     }
 }
