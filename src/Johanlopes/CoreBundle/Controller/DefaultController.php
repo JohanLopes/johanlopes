@@ -78,8 +78,8 @@ class DefaultController extends Controller
     }
 
     /**
+     * @param Request $request
      * @param string $slug Project slug
-     *
      * @return Response $response
      * @Route("/project/{slug}.html", name="project_show")
      * @Template()
@@ -99,6 +99,7 @@ class DefaultController extends Controller
     /**
      * @Route("/contact.html", name="contact")
      * @Template()
+     * @param Request $request
      * @return array
      */
     public function contactFormAction(Request $request)

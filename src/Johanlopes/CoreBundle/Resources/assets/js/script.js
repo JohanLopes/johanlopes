@@ -122,6 +122,7 @@ $(document).ready(function($){
 
     $('.bxslider').bxSlider({
         pager: false,
+        speed: 800,
         controls: false,
         auto: true,
         randomStart: true,
