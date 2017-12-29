@@ -1,9 +1,0 @@
-{
-  "name": "FranceBenevolat.org",
-  "resume": "<p>France B&eacute;n&eacute;volat a &eacute;t&eacute; cr&eacute;&eacute;e en 2003 par la fusion de deux associations  actives sur le champ de l&rsquo;aide &agrave; l&rsquo;action solidaire et b&eacute;n&eacute;vole :  Plan&egrave;te Solidarit&eacute; et le Centre National du Volontariat. <br />Autour de  sa vocation premi&egrave;re : aider chacun &agrave; trouver une mission b&eacute;n&eacute;vole  correspondant &agrave; ses souhaits, France B&eacute;n&eacute;volat a d&eacute;velopp&eacute; des activit&eacute;s  d&rsquo;&eacute;tude du b&eacute;n&eacute;volat, d&rsquo;accompagnement des associations dans les  questions de gestion des ressources humaines b&eacute;n&eacute;voles et d&rsquo;actions de  promotion du b&eacute;n&eacute;volat.</p><p>Aujourd'hui France B&eacute;n&eacute;volat innove avec ce site internet qui lui permet de proposer des annonces, de rechercher des b&eacute;n&eacute;voles ...</p>",
-  "technology": "Symfony 1.2, Propel, jQuery 1.3, géolocalisation",
-  "url": "http://www.francebenevolat.org",
-  "image": "francebenevolat.png",
-  "rank": 10,
-  "slug": "francebenevolat-org"
-}

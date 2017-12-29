@@ -1,0 +1,25 @@
+version: "2"
+options:
+  verbose: true
+  unison_image: 'eugenmayer/unison'
+
+syncs:
+  unison-sync-johanlopes:
+    src: '.'
+    sync_strategy: 'unison'
+    notify_terminal: true
+    sync_userid: '1000'
+    sync_args: '-prefer newer'
+    sync_excludes:
+        - '.git'
+        - '.gitignore'
+        - '.DS_Store'
+        - 'docker'
+        - 'docker-sync.yml'
+        - '.docker-sync/*'
+        - 'docker-compose.yml'
+        - 'docker-compose-dev.yml'
+        - 'supervisord.log'
+        - 'supervisord.pid'
+        - 'var/cache/*'
+        - 'var/sessions/*'

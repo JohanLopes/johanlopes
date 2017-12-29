@@ -1,0 +1,30 @@
+<div id="work">
+    <h1 class="mainTitle">{{ project.name }}</h3>
+
+    <div class="visu">
+        <img src="{{ asset('assets/images/' ~ project.image) }}" alt="{{ project.name }}" />
+    </div>
+
+    <div class="info">
+        {% if project.resume is not empty %}
+            <h3>A propos du projet :</h3>
+            <p>{{ project.resume|raw }}</p>
+        {% endif %}
+
+
+        {% if project.technology is not empty %}
+            <h3>Technologies utilisées :</h3>
+            <p>{{ project.technology }}</p>
+        {% endif %}
+
+
+        {% if project.url is not empty %}
+            <h3>Visitez ce site internet :</h3>
+            {% if project.url|slice(0, 4) == "http" %}
+                <p><strong><a href="{{ project.url }}" target="blank" title="Cliquez pour visiter ce site internet">{{ project.url }}</a></strong></p>
+            {% else %}
+                <p><strong>{{ project.url }}</strong></p>
+            {% endif %}
+        {% endif %}
+    </div>
+</div>

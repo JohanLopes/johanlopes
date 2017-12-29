@@ -1,0 +1,8 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    {% include 'default/anota.html.twig' %}
+    {% include 'default/about.html.twig' %}
+    {{ render(controller('App\\Controller\\DefaultController::portfolio')) }}
+    {% include 'default/contact.html.twig' %}
+{% endblock content %}

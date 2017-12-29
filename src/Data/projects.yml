@@ -1,0 +1,88 @@
+afnic:
+  name: "Afnic"
+  resume: ""
+  technology: "Symfony 1.4, Doctrine"
+  url: "http://www.afnic.fr/"
+  logo: "afnic.png"
+  image: "afnic.png"
+
+animaux-rencontres:
+  name: "Animaux-Rencontres.com"
+  resume: "<p style=\"text-align: justify;\"><strong>Animaux-Rencontres.com</strong> est un site  communautaire permettant aux propri&eacute;taires d&rsquo;animaux de partager la m&ecirc;me  passion et de pouvoir partager concernant leur compagnon. Ce site est une sorte de &laquo;&nbsp;Facebook&nbsp;&raquo; pour les animaux. Il permet de  partager des <strong>photos</strong>, <strong>vid&eacute;os</strong>, des <strong>ballades</strong>, de se <strong>faire des amis</strong>&hellip;</p><p style=\"text-align: justify;\">Si vous avez un animal, inscrivez-vous vite sur Animaux-Rencontres.com</p>"
+  technology: "#Symfony 1.2 puis migration sous Symfony 1.4, Doctrine 1.2, jQuery 1.4, jQuery UI 1.8, API FlickR"
+  url: "http://www.animaux-rencontres.com"
+  logo: "animauxrencontres.png"
+  image: "animauxrencontres.png"
+
+arianespace:
+  name: "Arianespace"
+  resume: ""
+  technology: "Symfony 2.0, Doctrine"
+  url: "Applications Intranet - Démo non disponible"
+  logo: "arianespace.png"
+  image: "arianespace.png"
+
+ateliermagique:
+  name: "Ateliermagique.com"
+  resume: ""
+  technology: "Symfony 1.4, Doctrine, Solr, jQuery"
+  url: "http://www.ateliermagique.com"
+  logo: "ateliermagique.png"
+  image: "ateliermagique.png"
+
+cosdesportesdelisere:
+  name: "Cosdesportesdelisere.fr"
+  resume: ""
+  technology: "Symfony 2.0, Doctrine 2, jQuery, ElasticSearch"
+  url: "http://www.cosdesportesdelisere.fr"
+  logo: "cosdesportesdelisere.png"
+  image: "cosdesportesdelisere.png"
+
+francebenevolat:
+  name: "FranceBenevolat.org"
+  resume: "<p>France B&eacute;n&eacute;volat a &eacute;t&eacute; cr&eacute;&eacute;e en 2003 par la fusion de deux associations  actives sur le champ de l&rsquo;aide &agrave; l&rsquo;action solidaire et b&eacute;n&eacute;vole :  Plan&egrave;te Solidarit&eacute; et le Centre National du Volontariat. <br />Autour de  sa vocation premi&egrave;re : aider chacun &agrave; trouver une mission b&eacute;n&eacute;vole  correspondant &agrave; ses souhaits, France B&eacute;n&eacute;volat a d&eacute;velopp&eacute; des activit&eacute;s  d&rsquo;&eacute;tude du b&eacute;n&eacute;volat, d&rsquo;accompagnement des associations dans les  questions de gestion des ressources humaines b&eacute;n&eacute;voles et d&rsquo;actions de  promotion du b&eacute;n&eacute;volat.</p><p>Aujourd'hui France B&eacute;n&eacute;volat innove avec ce site internet qui lui permet de proposer des annonces, de rechercher des b&eacute;n&eacute;voles ...</p>"
+  technology: "Symfony 1.2, Propel, jQuery 1.3, géolocalisation"
+  url: "http://www.francebenevolat.org"
+  logo: "francebenevolat.png"
+  image: "francebenevolat.png"
+
+gdf-suez:
+  name: "GDF Suez"
+  resume: ""
+  technology: "Symfony 1.4, Symfony 2, Doctrine"
+  url: "Multiple applications web"
+  logo: "gdfsuez.png"
+  image: "gdfsuez.png"
+
+groupe-seb:
+  name: "Groupe Seb"
+  resume: ""
+  technology: "Symfony 1.4, Doctrine, jQuery, Prince XML"
+  url: "Application intranet - Demo non disponible"
+  logo: "groupeseb.png"
+  image: "groupeseb.png"
+
+inventec:
+  name: "Inventec-Dehon.com"
+  resume: ""
+  technology: "Symfony 1.4, Doctrine, jQuery, Moteur de recherche, CMS"
+  url: "http://www.inventec.dehon.com"
+  logo: "inventec.png"
+  image: "inventec.png"
+
+kozoom:
+  name: "Kozoom.com"
+  resume: "<p><strong>Kozoom.com</strong> est un leader dans le monde du billard. Vous pouvez d&eacute;couvrir &agrave; travers ce site internet remis compl&egrave;tement &agrave; neuf de nombreuses informations concernant le billard. En effet, vous avez la possibilit&eacute; de consulter les <strong>r&eacute;sultats</strong> (classements et matchs) des comp&eacute;titions <strong>nationales et internationales</strong>, des <strong>photos</strong>, <strong>vid&eacute;os</strong>, <strong>news</strong>, <strong>palmares</strong> des joueurs et bien d'autres choses encore. La majorit&eacute; du contenu de ce site internet est <strong>gratuite</strong> mais si toutefois vous souhaitez allez plus loin, vous pourrez vous acquitter d'un <strong>abonnement Premium</strong> qui vous permettra d'acc&eacute;der en toute libert&eacute; au <strong>LIVE</strong> des rencontres, aux <strong>vid&eacute;os</strong>, aux <strong>explications techniques</strong> des plus grands professionnels ...</p><p>Vous &ecirc;tes passion&eacute; par le billard ou bien vous souhaitez d&eacute;couvrir ce sport, alors rejoingnez vite toute l'&eacute;quipe de Kozoom sur <strong>Kozoom.com</strong></p>"
+  technology: "Symfony 1.4, Doctrine 1.2, jQuery 1.4, JWPlayer (player flash pour les vidéos), Solr"
+  url: "http://www.kozoom.com"
+  logo: "kozoom.png"
+  image: "kozoom.png"
+
+servistreet:
+  name: "Servistreet.com"
+  resume: ""
+  technology: "Symfony 2.3, Doctrine 2, ElasticSearch, jQuery, Bootstrap"
+  url: "http://www.servistreet.com"
+  logo: "servistreet.png"
+  image: "servistreet.png"
+

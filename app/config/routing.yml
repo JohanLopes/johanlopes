@@ -1,8 +1,0 @@
-_liip_imagine:
-    resource: "@LiipImagineBundle/Resources/config/routing.xml"
-
-johanlopes_core:
-    resource: "@JohanlopesCoreBundle/Controller/"
-    type:     annotation
-    prefix:   /
-

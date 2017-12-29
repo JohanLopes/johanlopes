@@ -1,0 +1,20 @@
+{% form_theme form 'contact/theme.html.twig' %}
+
+
+<form class="contactForm clearfix"  method="post" action="{{ path('contactForm') }}">
+    <h1 class="mainTitle">Prenez le temps de m'envoyer un e-mail</h1>
+
+    <div id="contactFormInner">
+        {{ form_widget(form.name, {'attr': {'placeholder': 'Nom / Prénom'}}) }}
+        {{ form_errors(form.name) }}
+
+        {{ form_widget(form.email, {'attr': {'placeholder': 'E-mail'}}) }}
+        {{ form_errors(form.email) }}
+
+        {{ form_widget(form.message, {'attr': {'placeholder': 'Message'}}) }}
+        {{ form_errors(form.message) }}
+
+        {{ form_rest(form) }}
+        <input type="submit" name="submit" id="submit" value="Envoyer votre message">
+    </div>
+</form>

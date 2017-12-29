@@ -1,0 +1,36 @@
+ <!--Portfolio-->
+<section id="portfolio">
+    <!--Title-->
+    <div class="title">
+        <div>
+            <h1>Mes réalisations</h1>
+            <h4>Découvrez mes réalisations, mes projets ...</h4>
+        </div>
+        <div class="titleArrow"></div>
+    </div>
+    <!--End title-->
+
+    <!--Inner portfolio-->
+    <div id="innerPortfolio" class="clearfix">
+
+        <!-- Works list -->
+        <section id="works" class="clearfix">
+            <!--Portfolio-->
+            <ul class="portfolio clearfix">
+                {% for key, project in projects %}
+                    <li class="item">
+                        <img src="{{ asset('assets/images/' ~ project.logo) }}" alt="{{ project.name }}" />
+                        <a href="{{ path('project_show', { 'key': key }) }}" class="icon" rel="modal:open">+</a>
+                        <div class="hgroup">
+                            <h3>{{ project.name }}</h3>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+            <!--End portfolio-->
+        </section>
+        <!-- End works list -->
+    </div>
+    <!--End inner portfolio-->
+</section>
+<!--End portfolio-->
