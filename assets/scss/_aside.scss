@@ -1,0 +1,77 @@
+.aside {
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 768px;
+    background: $white;
+    box-shadow: -10px 0px 20px 0px #000;
+    z-index: 2000;
+    flex-direction: column;
+    display: flex;
+    height: 100vh;
+
+    /*&::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+    }*/
+
+    .aside-header {
+        background: $light;
+    }
+
+    .aside-close {
+        height: 3rem;
+        width: 3rem;
+        background: transparent;
+        border: 0;
+        font-size: 3rem;
+        line-height: 100%;
+        padding: 0;
+        margin: 0;
+        color: $gray-500;
+        font-weight: lighter;
+        transition: all 0.2s linear;
+        transform-origin: center;
+
+        &:hover,
+        &:focus {
+            color: $secondary;
+            cursor: pointer;
+            outline: none;
+            transform: rotate(-90deg);
+        }
+    }
+
+    .aside-actions {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1001;
+        background: $white;
+        border-top: 1px solid $gray-400;
+        padding: 0.5rem;
+        box-shadow: 0px -5px 20px 0px rgba(125,125,125,0.3);
+
+        &+.aside-content {
+            padding-bottom: 3.25rem;
+        }
+    }
+
+    .aside-loading {
+        height: 100%;
+        background: url('~@/assets/images/ring.svg') no-repeat center center;
+    }
+
+    .aside-content {
+        overflow: scroll;
+        overflow-x:hidden;
+        flex-grow: 1;
+    }
+}

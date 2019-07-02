@@ -1,0 +1,53 @@
+@import "~bootstrap/scss/functions";
+
+$font-family-base: 'Lato', sans-serif;
+$fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
+
+// Colors
+$blue:    #34578c;
+$red:     #ff3902;
+$green:   #41b883;
+$orange:  #ff8007;
+$cyan:    #05badd;
+$light:   #dee2e6;
+$dark: 	  #1F2B35;
+
+$primary:       $blue;
+$secondary:     $red;
+
+$enable-rounded:            false;
+$enable-shadows:            true;
+
+$spacer: 1.3rem;
+
+//Links
+$link-hover-decoration:     none;
+
+// Fonts
+$font-size-base: 0.85rem;
+$body-color:     #777;
+
+// Headings
+$headings-line-height:   1.5;
+$headings-font-weight:   700;
+$headings-color:         #333;
+$headings-font-weight:   400;
+$headings-margin-bottom: ($spacer / 1.3);
+
+$lead-font-size:         1.8rem;
+$lead-font-weight:       400;
+
+$h1-font-size: 5rem;
+$h2-font-size: 3rem;
+$h3-font-size: 1.5rem;
+$h4-font-size: 1.1rem;
+$h5-font-size: 1rem;
+$h6-font-size: 1rem;
+
+// Navbar
+$navbar-nav-link-padding-x: 1rem;
+
+// Carousel
+$carousel-indicator-height: 5px;
+
+@import "~bootstrap/scss/variables";
