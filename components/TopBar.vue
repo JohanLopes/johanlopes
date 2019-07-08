@@ -1,12 +1,13 @@
 <template>
-     <nav id="topbar" class="navbar navbar-expand-sm" :class="[{ fixed: fixed }, navbarTheme]">
+     <b-navbar toggleable="md" :type="type" :fixed="fixedPlacement" id="topbar">
         <div class="container">
-            <a class="navbar-brand" href="/"><img src="~assets/images/logo.svg" alt="Johan Lopes" /></a>
-            <h1 class="navbar-title">Johan LOPES <br /><small>Conseil et développement de services web</small></h1>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topbarCollapse" aria-controls="topbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="topbarCollapse">
+            <b-navbar-brand href="/"><img src="~assets/images/logo.svg" alt="Johan Lopes" /></b-navbar-brand>
+            <h1 class="navbar-title">
+                Johan LOPES
+                <div class="d-none d-lg-block"><small>Conseil et développement de services web</small></div>
+            </h1>
+            <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+            <b-collapse id="nav-collapse" is-nav>
                 <scrollactive tag="ul" active-class="active" :offset="topbarHeight" class="navbar-nav ml-auto">
                     <li class="nav-item">
                         <a class="nav-link scrollactive-item" href="#services">Mes domaines d'expertise</a>
@@ -18,9 +19,9 @@
                         <a class="nav-link scrollactive-item" href="#contact">On discute de votre projet ?</a>
                     </li>
                 </scrollactive>
-            </div>
+            </b-collapse>
         </div>
-    </nav>
+     </b-navbar>
 </template>
 
 <script>
@@ -44,9 +45,13 @@
             }
         },
         computed: {
-            navbarTheme() {
-                return this.fixed ? 'navbar-light' : 'navbar-dark';
+            type() {
+                return this.fixed ? 'light' : 'dark';
+            },
+            fixedPlacement() {
+                return this.fixed ? 'top' : false;
             }
+
         },
         beforeMount () {
             window.addEventListener('scroll', this.affixTopbar);
@@ -59,6 +64,7 @@
 
 <style lang="scss" scoped>
     @import '~assets/scss/variables';
+    @import '~bootstrap/scss/mixins/breakpoints';
 
     #topbar {
         left: 0;
@@ -68,7 +74,7 @@
         z-index: 2000;
         transition: all 0.5s ease-out;
 
-        &.fixed {
+        &.fixed-top {
             position: fixed;
             box-shadow: 0px 0px 10px 0px #888;
         }
@@ -111,11 +117,24 @@
                     filter: invert(0.3);
                 }
             }
+
+            @include media-breakpoint-down('sm') {
+                .navbar-collapse {
+                    margin-top: 20px;
+                    background: rgb(240, 240, 240);
+
+                    a {
+                        padding-top: 20px;
+                        padding-bottom: 20px;
+                    }
+                }
+            }
         }
 
         &.navbar-dark {
-            height: 80px;
-            margin-top: 20px;
+            height: 100px;
+            padding-top: 20px;
+            padding-bottom: 20px;
 
             .navbar-brand {
                 img {
@@ -127,6 +146,22 @@
 
             .navbar-title {
                 display: none;
+            }
+
+            @include media-breakpoint-down('sm') {
+                .navbar-collapse {
+                    margin-top: 20px;
+                    background: rgb(0, 0, 0);
+
+                    li:not(:last-child) {
+                        border-bottom: 1px solid #fff;
+                    }
+
+                    a {
+                        padding-top: 20px;
+                        padding-bottom: 20px;
+                    }
+                }
             }
         }
     }

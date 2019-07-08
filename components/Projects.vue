@@ -1,5 +1,5 @@
 <template>
-    <section id="projects" class="bg-primary p-5">
+    <section id="projects" class="bg-primary py-5">
         <div class="container">
             <h4 class="h2 text-center text-white">Quelques réalisations...</h4>
 

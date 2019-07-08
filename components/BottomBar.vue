@@ -1,7 +1,7 @@
 <template>
     <footer id="footer" class="bg-dark text-light">
             <div class="container">
-                <div class="d-flex align-items-center border-top border-light py-3">
+                <div class="d-flex flex-wrap align-items-center justify-content-between border-top border-light py-3">
                     <p class="mb-0 mr-auto">Tous droits réservés - &copy; Copyright 2009 / {{ new Date().getFullYear() }}</p>
 
                     <nuxt-link :to="{ name: 'index-legal-notices'}">

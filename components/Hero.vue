@@ -5,14 +5,14 @@
                 <h1 class="h2 text-white">
                     <type-it
                         :cursor="false"
-                        :waitUntilVisible="true"
+                        :waitUntilVisible="false"
                         strings="Salut,<br />je suis <strong class='text-uppercase'>Johan Lopes</strong>">
                     </type-it>
                 </h1>
                 <h2 class="lead text-white">Expert web freelance ✌️</h2>
                 <h3 class="h4 text-light">
                     Conseil et développement de services web<br />
-                    Spécialiste Symfony <small class="font-italic">(backend)</small> & Vue.Js <small class="font-italic">(frontend)</small>
+                    Spécialiste Symfony <small class="font-italic d-none d-md-inline">(backend)</small> & Vue.Js <small class="font-italic d-none d-md-inline">(frontend)</small>
                 </h3>
             </div>
         </div>

@@ -1,47 +1,53 @@
 <template>
-    <section id="services" class="p-5">
+    <section id="services" class="py-5">
         <div class="container">
             <h4 class="h2 text-center text-primary">Mes domaines d'expertise</h4>
 
             <p class="text-center w-75 mx-auto">Parce que le métier de développeur ne consiste pas à écrire simplement des lignes de codes, mes 10 années d'expériences m'ont offert une certaine polyvalence qui me permet aujourd'hui de vous accompagner sur toutes les phases de création et de déploiement de votre projet.</p>
 
-            <div class="card-deck mt-5">
-                <div class="card">
-                    <div class="card-body pb-0 text-center" style="height: 200px;">
-                        <img src="~assets/images/scrum.svg" class="h-100" />
-                    </div>
-                    <div class="card-body h-100">
-                        <h3 class="card-title text-center">Conseil & Gestion de projet</h3>
-                        <p class="card-text text-body">Dès la naissance de votre projet, je vous accompagne dans sa <strong>définition technique et fonctionnelle</strong> afin que vous puissiez rapidement faire les bons choix. </p>
-                        <p class="card-text text-body">Je suis <strong>pragmatique</strong> et vous oriente vers des objectifs réalisables en accords avec votre planning de livraison et votre budget.</p>
-                        <p class="card-text text-body">Afin de maximiser les chances de réussite d'un projet web, je veille à ce que son équipe soit <strong>organisée et alignée sur des objectifs communs</strong>.
-                        </p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-body pb-0 text-center" style="height: 200px;">
-                        <img src="~assets/images/symfony.svg" class="h-100" />
-                    </div>
-                    <div class="card-body h-100">
-                        <h3 class="card-title text-center">Développement Backend</h3>
-                        <p class="card-text text-body">Adepte du framework <a href="https://symfony.com" target="_blank">Symfony</a> depuis 10 ans, j'ai choisi ce framework pour <strong>sa robustesse, sa flexibilité et son évolutivité</strong>.</p>
-                        <p class="card-text text-body">Aujourd'hui, la version 4 de <a href="https://symfony.com" target="_blank">Symfony</a> me permet de vous proposer des applications <strong>complètes</strong> (backend, frontend, API...) et <strong>pérennes</strong>.</p>
-                        <p class="card-text text-body"><a href="https://symfony.com" target="_blank">Symfony</a> est open-source et bénéficie d'une grande communauté de développeurs, ce qui lui permet d'être régulièrement amélioré et mis à jour.</p>
+            <div class="row mt-5">
+                <div class="col-12 col-lg-4 mb-3">
+                    <div class="card h-100">
+                        <div class="card-body pb-0 text-center" style="height: 200px;">
+                            <img src="~assets/images/scrum.svg" class="h-100" />
+                        </div>
+                        <div class="card-body h-100">
+                            <h3 class="card-title text-center">Conseil & Gestion de projet</h3>
+                            <p class="card-text text-body">Dès la naissance de votre projet, je vous accompagne dans sa <strong>définition technique et fonctionnelle</strong> afin que vous puissiez rapidement faire les bons choix. </p>
+                            <p class="card-text text-body">Je suis <strong>pragmatique</strong> et vous oriente vers des objectifs réalisables en accords avec votre planning de livraison et votre budget.</p>
+                            <p class="card-text text-body">Afin de maximiser les chances de réussite d'un projet web, je veille à ce que son équipe soit <strong>organisée et alignée sur des objectifs communs</strong>.
+                            </p>
+                        </div>
                     </div>
                 </div>
-                <div class="card">
-                    <div class="card-body pb-0 text-center" style="height: 200px;">
-                        <img src="~assets/images/vuejs.svg" class="h-100" />
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <div class="card h-100">
+                        <div class="card-body pb-0 text-center" style="height: 200px;">
+                            <img src="~assets/images/symfony.svg" class="h-100" />
+                        </div>
+                        <div class="card-body h-100">
+                            <h3 class="card-title text-center">Développement Backend</h3>
+                            <p class="card-text text-body">Adepte du framework <a href="https://symfony.com" target="_blank">Symfony</a> depuis 10 ans, j'ai choisi ce framework pour <strong>sa robustesse, sa flexibilité et son évolutivité</strong>.</p>
+                            <p class="card-text text-body">Aujourd'hui, la version 4 de <a href="https://symfony.com" target="_blank">Symfony</a> me permet de vous proposer des applications <strong>complètes</strong> (backend, frontend, API...) et <strong>pérennes</strong>.</p>
+                            <p class="card-text text-body"><a href="https://symfony.com" target="_blank">Symfony</a> est open-source et bénéficie d'une grande communauté de développeurs, ce qui lui permet d'être régulièrement amélioré et mis à jour.</p>
+                        </div>
                     </div>
-                    <div class="card-body h-100">
-                        <h3 class="card-title text-center">Développement Frontend</h3>
-                        <p class="card-text text-body">Depuis {{ (new Date().getFullYear()) - 2016 }} ans, je vous propose aussi des interfaces utilisateurs plus dynamiques, basées sur le célèbre framework <a href="https://fr.vuejs.org/index.html" target="_blank">Vue.js</a>.</p>
-                        <p class="card-text text-body">La communauté de développeurs <a href="https://fr.vuejs.org/index.html" target="_blank">Vue.js</a> propose de nombreux "plugins" ou "composants" qui permettent d'ajouter facilement des fonctionnalités à vos interfaces, et de pouvoir ainsi tester rapidement leur efficacité auprès de vos clients.</p>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <div class="card h-100">
+                        <div class="card-body pb-0 text-center" style="height: 200px;">
+                            <img src="~assets/images/vuejs.svg" class="h-100" />
+                        </div>
+                        <div class="card-body h-100">
+                            <h3 class="card-title text-center">Développement Frontend</h3>
+                            <p class="card-text text-body">Depuis {{ (new Date().getFullYear()) - 2016 }} ans, je vous propose aussi des interfaces utilisateurs plus dynamiques, basées sur le célèbre framework <a href="https://fr.vuejs.org/index.html" target="_blank">Vue.js</a>.</p>
+                            <p class="card-text text-body">La communauté de développeurs <a href="https://fr.vuejs.org/index.html" target="_blank">Vue.js</a> propose de nombreux "plugins" ou "composants" qui permettent d'ajouter facilement des fonctionnalités à vos interfaces, et de pouvoir ainsi tester rapidement leur efficacité auprès de vos clients.</p>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="card mt-3">
+            <div class="card">
                 <div class="card-body h-100">
                     <h3 class="card-title text-center">Mais aussi...</h3>
                     <div class="row">

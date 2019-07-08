@@ -1,10 +1,10 @@
 <template>
-    <section id="contact" class="bg-dark p-5">
+    <section id="contact" class="bg-dark py-5">
         <div class="container">
             <h4 class="h2 text-center text-white">Un projet ? On en discute !</h4>
 
-            <div class="row mt-5 mb-2">
-                <div class="col-5">
+            <div class="row mt-2 mt-md-5">
+                <div class="col-12 col-lg-5 mb-2">
                     <h5 class="text-justify text-white font-weight-bold">
                         Vous avez un projet web et vous recherchez un prestaire pouvant vous accompagner
                         dans l'élaboration de celui-ci ?
@@ -18,9 +18,9 @@
                         Suite de ce premier échange, nous définirons ensemble les parties de votre projet
                         sur lesquelles je pourrais intervenir.
                     </p>
-                    <p class="text-right text-secondary mb-0">Je vous invite donc à remplir ce formulaire <i class="fa fa-angle-double-right ml-2"></i></p>
+                    <p class="text-right text-secondary mb-0 d-none d-lg-block">Je vous invite donc à remplir ce formulaire <i class="fa fa-angle-double-right ml-2"></i></p>
                 </div>
-                <div class="col">
+                <div class="col mb-2">
                     <form v-if="!state" @submit.prevent="onSubmit" class="p-3">
                         <div class="form-group">
                             <div class="d-flex align-items-baseline">
@@ -49,7 +49,7 @@
                             <button type="submit" class="btn btn-outline-secondary" :disabled="!formCompleted || !this.captchaToken">
                                 <i class="fa fa-paper-plane mr-2"></i> Envoyer mon message
                             </button>
-                            <p class="ml-auto mb-0 text-muted">Réponse rapide, sous quelques heures !</p>
+                            <p class="ml-auto mb-0 text-muted d-none d-sm-block">Réponse rapide, sous quelques heures !</p>
                         </div>
                     </form>
                     <div v-else-if="state === 'sending'" class="text-white text-center p-3">

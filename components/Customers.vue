@@ -1,13 +1,13 @@
 <template>
-    <section id="customers" class="bg-light">
-        <div class="p-3 d-flex align-items-center justify-content-center">
+    <section id="customers" class="bg-light d-none d-md-block">
+        <div class="p-3 d-flex flex-wrap align-items-center justify-content-center">
             <img :src="logoUrl(slug)" :alt="name" :key="slug" class="px-3" v-for="(name, slug) in customers" />
         </div>
         <type-it
                 :cursor="false"
                 :waitUntilVisible="true"
-                strings="Ils m'ont fait confiance pour leurs projets web 😘"
-                class="customers-explanation">
+                strings="Ils m'ont fait confiance pour leurs projets web 😊"
+                class="customers-explanation d-none d-lg-block">
         </type-it>
     </section>
 </template>
